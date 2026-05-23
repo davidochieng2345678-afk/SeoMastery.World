@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 1.2: How Search Engines Actually Work | SEO Mastery | David Kiruo</title>
+    <meta name="description" content="Learn exactly how Google crawls, indexes, and ranks websites. Free SEO section from David Kiruo.">
+    <meta name="author" content="David Kiruo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://seomastery.world/chapters/chapter-1/section-1.2/">
+    
+    <meta property="og:title" content="Section 1.2: How Search Engines Actually Work">
+    <meta property="og:description" content="Learn how Google crawls, indexes, and ranks websites.">
+    <meta property="og:url" content="https://seomastery.world/chapters/chapter-1/section-1.2/">
+    <meta property="og:type" content="article">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Section 1.2: How Search Engines Actually Work",
+        "description": "Learn how Google crawls, indexes, and ranks websites.",
+        "author": {"@type": "Person", "name": "David Kiruo", "url": "https://seomastery.world/about.html"},
+        "datePublished": "2025-01-15",
+        "articleSection": "Chapter 1",
+        "inLanguage": "en-KE"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FAFAF8;
+            color: #1A1A1A;
+            line-height: 1.6;
+        }
+        
+        .nav {
+            background: #0D1117;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .nav a {
+            color: #FAFAF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+        
+        .nav a:hover {
+            background: rgba(201, 151, 58, 0.2);
+            color: #C9973A;
+        }
+        
+        .nav-logo {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        
+        .nav-logo span { color: #C9973A; }
+        .nav-links { display: flex; gap: 16px; flex-wrap: wrap; }
+        
+        .progress-container {
+            position: sticky;
+            top: 60px;
+            height: 4px;
+            background: #E5E7EB;
+            margin: 0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: #C9973A;
+            transition: width 0.3s ease;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .breadcrumb {
+            margin: 0 0 30px;
+            font-size: 0.85rem;
+            color: #6B7280;
+        }
+        
+        .breadcrumb a { color: #C9973A; text-decoration: none; }
+        
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 24px;
+            border-left: 4px solid #C9973A;
+            padding-left: 20px;
+        }
+        
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 1.6rem;
+            margin: 40px 0 16px;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 24px 0 12px;
+        }
+        
+        p {
+            margin-bottom: 1.2em;
+            font-size: 1.05rem;
+            color: #2D2D2D;
+        }
+        
+        .kenya-box {
+            background: #F0F4F0;
+            border: 1px solid #006B3F;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 16px;
+        }
+        
+        .kenya-box h3 {
+            color: #006B3F;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        
+        .takeaway {
+            background: #0D1117;
+            color: #FAFAF8;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 16px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .takeaway h3 { color: #C9973A; margin-top: 0; margin-bottom: 12px; }
+        .takeaway p { color: rgba(255,255,255,0.8); margin-bottom: 0; }
+        
+        .section-nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 48px 0 32px;
+            padding-top: 24px;
+            border-top: 1px solid #E5E7EB;
+        }
+        
+        .section-nav a {
+            background: #0D1117;
+            color: #FAFAF8;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        
+        .section-nav a:hover { background: #C9973A; color: #0D1117; }
+        
+        footer {
+            background: #0D1117;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 32px;
+            margin-top: 60px;
+        }
+        
+        footer a { color: #C9973A; text-decoration: none; }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #C9973A;
+            color: #0D1117;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .back-to-top.visible { opacity: 1; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 40px 20px; }
+            .section-nav { flex-direction: column; gap: 12px; align-items: center; }
+            .section-nav a { width: 100%; text-align: center; }
+            .takeaway { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <a href="/" class="nav-logo">David <span>Kiruo</span></a>
+    <div class="nav-links">
+        <a href="/chapters/">Chapters</a>
+        <a href="/about.html">About</a>
+        <a href="/buy.html">Buy</a>
+    </div>
+</nav>
+
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<main class="container">
+    
+    <div class="breadcrumb">
+        <a href="/">Home</a> > 
+        <a href="/chapters/">Chapters</a> > 
+        <a href="/chapters/chapter-1/">Chapter 1</a> > 
+        <span>Section 1.2: How Search Engines Actually Work</span>
+    </div>
+    
+    <article>
+        <h1>Section 1.2: How Search Engines Actually Work</h1>
+        
+        <p><strong>By David Kiruo | Nairobi, Kenya — For the World</strong></p>
+        
+        <p>When I first started learning SEO, I treated Google like a magic box. I put content in
