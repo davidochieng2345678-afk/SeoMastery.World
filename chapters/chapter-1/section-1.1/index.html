@@ -50,48 +50,137 @@
             line-height: 1.6;
         }
         
+        /* Navigation - Mobile First */
         .nav {
             background: #0D1117;
             padding: 16px 24px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
-        }
-        
-        .nav a {
-            color: #FAFAF8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        
-        .nav a:hover {
-            background: rgba(201, 151, 58, 0.2);
-            color: #C9973A;
         }
         
         .nav-logo {
             font-family: Georgia, serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
+            color: #FAFAF8;
+            text-decoration: none;
         }
         
         .nav-logo span {
             color: #C9973A;
         }
         
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #FAFAF8;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
         .nav-links {
             display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #FAFAF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(201, 151, 58, 0.15);
+            color: #C9973A;
+        }
+        
+        .nav-links a:last-child {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 8px 20px;
+        }
+        
+        .nav-links a:last-child:hover {
+            background: #B8860B;
+            color: #0D1117;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+                padding: 20px 0 10px;
+                margin-top: 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links.show {
+                display: flex;
+            }
+            
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .nav-links a:last-child {
+                background: #C9973A;
+                width: auto;
+                margin: 0 auto;
+                min-width: 150px;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .nav-links {
+                display: flex !important;
+            }
         }
         
         .progress-container {
@@ -357,11 +446,21 @@
 <body>
 
 <nav class="nav">
-    <a href="/" class="nav-logo">David <span>Kiruo</span></a>
-    <div class="nav-links">
-        <a href="/chapters/">Chapters</a>
-        <a href="/about.html">About</a>
-        <a href="/buy.html">Buy</a>
+    <div class="nav-container">
+        <a href="/" class="nav-logo">David <span>Kiruo</span></a>
+        
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="/chapters/">Chapters</a>
+            <a href="/about.html">About</a>
+            <a href="/buy.html">Buy Book</a>
+            <a href="/contact.html">Contact</a>
+        </div>
     </div>
 </nav>
 
@@ -473,7 +572,7 @@
             <div class="takeaway-icon">🔑</div>
             <div>
                 <h3>David's Key Takeaway</h3>
-                <p>SEO is not complicated. It is just misunderstood. The simple definition I gave you — building Google's trust to reach the right person at the right moment — is the foundation of everything else in this book. Memorise it. Write it down. Come back to it whenever you feel overwhelmed. If you understand nothing else from this chapter, understand that.</p>
+                <p>SEO is not complicated. It is just misunderstood. The simple definition I gave you — building Google's trust to reach the right person at the right moment — is the foundation of everything else in this book. Memorise it. Write it down. Come back to it whenever you feel overwhelmed.</p>
                 <p style="margin-top: 12px;"><strong>From Nairobi to the world — these principles work everywhere.</strong></p>
             </div>
         </div>
@@ -483,8 +582,6 @@
         <p>In Section 1.2, we will look under the hood of Google and see exactly how search engines crawl, index, and rank websites.</p>
         
         <p>In Section 1.3, I will tell you the hard truth about the Google algorithm — what I learned from years of trial and error, including the expensive mistakes I made so you do not have to make them.</p>
-        
-        <p>Now let us keep going.</p>
         
         <p><em>— David Kiruo, Nairobi, Kenya — For the World</em></p>
         
@@ -533,6 +630,23 @@
         backToTop.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                navToggle.classList.remove('active');
+            });
         });
     }
 </script>
