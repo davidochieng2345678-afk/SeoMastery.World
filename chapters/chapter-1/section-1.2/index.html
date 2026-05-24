@@ -50,48 +50,130 @@
             line-height: 1.6;
         }
         
+        /* Navigation - Mobile First */
         .nav {
             background: #0D1117;
             padding: 16px 24px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
-        }
-        
-        .nav a {
-            color: #FAFAF8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        
-        .nav a:hover {
-            background: rgba(201, 151, 58, 0.2);
-            color: #C9973A;
         }
         
         .nav-logo {
             font-family: Georgia, serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
+            color: #FAFAF8;
+            text-decoration: none;
         }
         
         .nav-logo span {
             color: #C9973A;
         }
         
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #FAFAF8;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
         .nav-links {
             display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #FAFAF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(201, 151, 58, 0.15);
+            color: #C9973A;
+        }
+        
+        .nav-links a:last-child {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 8px 20px;
+        }
+        
+        .nav-links a:last-child:hover {
+            background: #B8860B;
+            color: #0D1117;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+                padding: 20px 0 10px;
+                margin-top: 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links.show {
+                display: flex;
+            }
+            
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .nav-links {
+                display: flex !important;
+            }
         }
         
         .progress-container {
@@ -225,10 +307,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-        
-        .kenya-box p {
-            margin-bottom: 8px;
         }
         
         .code-block {
@@ -381,11 +459,21 @@
 <body>
 
 <nav class="nav">
-    <a href="/" class="nav-logo">David <span>Kiruo</span></a>
-    <div class="nav-links">
-        <a href="/chapters/">Chapters</a>
-        <a href="/about.html">About</a>
-        <a href="/buy.html">Buy</a>
+    <div class="nav-container">
+        <a href="/" class="nav-logo">David <span>Kiruo</span></a>
+        
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="/chapters/">Chapters</a>
+            <a href="/about.html">About</a>
+            <a href="/buy.html">Buy Book</a>
+            <a href="/contact.html">Contact</a>
+        </div>
     </div>
 </nav>
 
@@ -507,27 +595,17 @@
             <li><strong>User Experience Signals (Medium Impact)</strong> — How long do visitors stay? Do they click back immediately? Google watches.</li>
         </ul>
         
-        <div class="kenya-box">
-            <h3>🇰🇪 Real World Example — Why Does a Big Site Rank Above a Small Kenyan Shop?</h3>
-            <p>This is a question I get asked all the time. The honest answer:</p>
-            <p><strong>Big sites have:</strong> Thousands of pages of content, millions of backlinks, fast loading speeds, perfect keyword optimisation, and years of Google trust built up.</p>
-            <p><strong>But here is what I learned:</strong> You cannot out-rank Jumia for broad national keywords like "buy phone online Kenya." But you CAN rank above them for hyper-local searches like "phone shop Ngong Road" or "buy Samsung A15 Nairobi South B." This is the local SEO strategy I teach in Chapter 5 — and it is where small Kenyan businesses win big.</p>
-        </div>
-        
         <div class="takeaway">
             <div class="takeaway-icon">🔑</div>
             <div>
                 <h3>David's Key Takeaway</h3>
-                <p>Crawling gets you found. Indexing gets you stored. Ranking gets you seen. All three must work together. I have seen beautiful websites with great content that ranked for nothing — simply because Googlebot was being blocked by a single line in their robots.txt file.</p>
-                <p style="margin-top: 12px;">Before you do any SEO work on your website, check these three things first: Can Google crawl you? Are you indexed? What are you currently ranking for? Use Google Search Console — it is completely free and answers all three questions in minutes.</p>
+                <p>Crawling gets you found. Indexing gets you stored. Ranking gets you seen. All three must work together. Before you do any SEO work, check these three things first: Can Google crawl you? Are you indexed? What are you currently ranking for? Use Google Search Console — it is completely free and answers all three questions in minutes.</p>
             </div>
         </div>
         
         <h2>What Comes Next</h2>
         
         <p>In Section 1.3, I will break down crawling, indexing, and ranking in even more detail — including real examples from my own sites and the expensive mistakes I made so you don't have to.</p>
-        
-        <p>For now, go check if Google has indexed your website using the <code>site:yourdomain.com</code> command. You might be surprised by what you find.</p>
         
         <p><em>— David Kiruo, Nairobi, Kenya — For the World</em></p>
         
@@ -548,6 +626,7 @@
 <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
 
 <script>
+    // Reading progress bar
     const progressBar = document.getElementById('progressBar');
     
     function updateProgressBar() {
@@ -562,6 +641,7 @@
     window.addEventListener('scroll', updateProgressBar);
     updateProgressBar();
     
+    // Back to top button
     const backToTop = document.getElementById('backToTop');
     
     if (backToTop) {
@@ -576,6 +656,24 @@
         backToTop.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                navToggle.classList.remove('active');
+            });
         });
     }
 </script>
