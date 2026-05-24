@@ -7,41 +7,35 @@
     <meta name="description" content="Buy SEO Mastery: From Nairobi to the World. Complete SEO guide. Instant PDF delivery via WhatsApp or Email. 20 chapters, 300+ pages.">
     <meta name="author" content="David Kiruo">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://seomastery.world/buy">
+    <link rel="canonical" href="https://seomastery.world/buy.html">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Buy SEO Mastery: From Nairobi to the World">
     <meta property="og:description" content="The complete SEO guide written from Kenya for the world. 20 chapters, 300+ pages. Instant PDF delivery.">
-    <meta property="og:image" content="https://seomastery.world/assets/images/book-cover.webp">
-    <meta property="og:url" content="https://seomastery.world/buy">
+    <meta property="og:url" content="https://seomastery.world/buy.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SEO Mastery by David Kiruo">
     
-    <!-- Schema markup for Offer -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Buy SEO Mastery: From Nairobi to the World">
+    <meta name="twitter:description" content="The complete SEO guide written from Kenya for the world.">
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "SEO Mastery: From Nairobi to the World",
         "description": "The complete SEO guide written from Kenya for the world. Learn to dominate Google from anywhere.",
-        "image": "https://seomastery.world/assets/images/book-cover.webp",
         "author": {
             "@type": "Person",
             "name": "David Kiruo",
-            "url": "https://seomastery.world/about"
+            "url": "https://seomastery.world/about.html"
         },
         "offers": {
             "@type": "Offer",
             "price": "1500",
             "priceCurrency": "KES",
             "availability": "https://schema.org/InStock",
-            "validFrom": "2025-01-15",
-            "priceValidUntil": "2025-12-31"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "47"
+            "validFrom": "2025-01-15"
         }
     }
     </script>
@@ -60,59 +54,145 @@
             line-height: 1.6;
         }
         
-        /* Navigation */
+        /* Navigation - Mobile First */
         .nav {
             background: #0D1117;
             padding: 16px 24px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
-        }
-        
-        .nav a {
-            color: #FAFAF8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        
-        .nav a:hover {
-            background: rgba(201, 151, 58, 0.2);
-            color: #C9973A;
         }
         
         .nav-logo {
             font-family: Georgia, serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
+            color: #FAFAF8;
+            text-decoration: none;
         }
         
         .nav-logo span {
             color: #C9973A;
         }
         
-        .nav-links {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
         }
         
-        /* Main container */
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #FAFAF8;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #FAFAF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(201, 151, 58, 0.15);
+            color: #C9973A;
+        }
+        
+        .nav-links a:last-child {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 8px 20px;
+        }
+        
+        .nav-links a:last-child:hover {
+            background: #B8860B;
+            color: #0D1117;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+                padding: 20px 0 10px;
+                margin-top: 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links.show {
+                display: flex;
+            }
+            
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .nav-links a:last-child {
+                background: #C9973A;
+                width: auto;
+                margin: 0 auto;
+                min-width: 150px;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .nav-links {
+                display: flex !important;
+            }
+        }
+        
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 60px 24px;
         }
         
-        /* Typography */
         h1 {
             font-family: Georgia, serif;
             font-size: 2.5rem;
@@ -124,23 +204,15 @@
         .subtitle {
             text-align: center;
             color: #6B7280;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
             font-size: 1.1rem;
         }
         
-        h2 {
-            font-family: Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 32px 0 16px;
-        }
-        
-        /* Price cards */
         .price-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin: 32px 0;
+            gap: 30px;
+            margin: 40px 0;
         }
         
         .price-card {
@@ -163,7 +235,7 @@
         }
         
         .currency {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 500;
             color: #6B7280;
         }
@@ -212,27 +284,15 @@
             transition: transform 0.2s;
             margin-top: 16px;
             width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
         }
         
         .btn:hover {
             transform: translateY(-2px);
         }
         
-        .btn-wa {
-            background: #25D366;
-            color: white;
-        }
-        
-        .btn-wa:hover {
-            background: #128C7E;
-        }
-        
-        .btn-email {
-            background: #0D1117;
-            color: white;
-        }
-        
-        /* Payment methods section */
         .payment-methods {
             background: #F4EFE4;
             border-radius: 24px;
@@ -240,21 +300,27 @@
             margin: 32px 0;
         }
         
+        .payment-methods h2 {
+            margin-bottom: 20px;
+        }
+        
         .method-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
             margin-top: 24px;
         }
         
         .method {
             text-align: center;
-            padding: 16px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
         }
         
         .method-icon {
-            font-size: 2rem;
-            margin-bottom: 8px;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
         }
         
         .whatsapp-link {
@@ -267,9 +333,13 @@
             align-items: center;
             gap: 8px;
             margin-top: 16px;
+            font-weight: 600;
         }
         
-        /* Instructions box */
+        .whatsapp-link:hover {
+            background: #128C7E;
+        }
+        
         .instructions {
             background: #0D1117;
             color: white;
@@ -290,7 +360,6 @@
             color: #C9973A;
         }
         
-        /* Launch timer */
         .launch-timer {
             background: #C9973A;
             color: #0D1117;
@@ -301,7 +370,6 @@
             font-weight: bold;
         }
         
-        /* Guarantee */
         .guarantee {
             text-align: center;
             padding: 32px;
@@ -311,7 +379,6 @@
             margin: 32px 0;
         }
         
-        /* FAQ */
         .faq-item {
             margin: 24px 0;
             border-bottom: 1px solid #E5E7EB;
@@ -324,6 +391,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 8px 0;
         }
         
         .faq-answer {
@@ -336,7 +404,6 @@
             display: block;
         }
         
-        /* Footer */
         footer {
             background: #0D1117;
             color: rgba(255, 255, 255, 0.5);
@@ -350,10 +417,10 @@
             text-decoration: none;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .price-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             h1 {
@@ -374,11 +441,21 @@
 <body>
 
 <nav class="nav">
-    <a href="/" class="nav-logo">David <span>Kiruo</span></a>
-    <div class="nav-links">
-        <a href="/chapters/">Chapters</a>
-        <a href="/about.html">About</a>
-        <a href="/buy.html">Buy</a>
+    <div class="nav-container">
+        <a href="/" class="nav-logo">David <span>Kiruo</span></a>
+        
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="/chapters/">Chapters</a>
+            <a href="/about.html">About</a>
+            <a href="/buy.html">Buy Book</a>
+            <a href="/contact.html">Contact</a>
+        </div>
     </div>
 </nav>
 
@@ -544,15 +621,35 @@
         const diff = launchEnd - now;
         
         if (diff <= 0) {
-            document.getElementById('launchTimer').style.display = 'none';
+            const timer = document.getElementById('launchTimer');
+            if (timer) timer.style.display = 'none';
             return;
         }
         
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        document.getElementById('countdown').innerHTML = `${days} days left`;
+        const countdownSpan = document.getElementById('countdown');
+        if (countdownSpan) countdownSpan.innerHTML = `${days} days left`;
     }
     
     updateCountdown();
+    
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
 </script>
 
 </body>
