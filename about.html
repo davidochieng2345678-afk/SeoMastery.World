@@ -11,9 +11,9 @@
     
     <meta property="og:title" content="About David Kiruo | SEO Mastery Author">
     <meta property="og:description" content="Kenyan SEO expert. Author of SEO Mastery: From Nairobi to the World.">
-    <meta property="og:image" content="https://seomastery.world/assets/images/david-kiruo.webp">
     <meta property="og:url" content="https://seomastery.world/about.html">
     <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="SEO Mastery by David Kiruo">
     
     <script type="application/ld+json">
     {
@@ -23,16 +23,13 @@
         "jobTitle": "SEO Expert & Author",
         "url": "https://seomastery.world/about.html",
         "sameAs": [
-            "https://wa.me/254710346425",
-            "https://twitter.com/YOURHANDLE",
-            "https://linkedin.com/in/YOURPROFILE"
+            "https://wa.me/254710346425"
         ],
         "worksFor": {
             "@type": "Organization",
             "name": "SEO Mastery"
         },
         "knowsAbout": ["SEO", "Search Engine Optimization", "Digital Marketing", "Content Strategy", "Link Building"],
-        "alumniOf": "Nairobi",
         "homeLocation": {
             "@type": "City",
             "name": "Nairobi, Kenya"
@@ -54,41 +51,138 @@
             line-height: 1.6;
         }
         
+        /* Navigation - Mobile First */
         .nav {
             background: #0D1117;
             padding: 16px 24px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
-        }
-        
-        .nav a {
-            color: #FAFAF8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 6px;
-        }
-        
-        .nav a:hover {
-            background: rgba(201, 151, 58, 0.2);
-            color: #C9973A;
         }
         
         .nav-logo {
             font-family: Georgia, serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
+            color: #FAFAF8;
+            text-decoration: none;
         }
         
-        .nav-logo span { color: #C9973A; }
-        .nav-links { display: flex; gap: 16px; flex-wrap: wrap; }
+        .nav-logo span {
+            color: #C9973A;
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #FAFAF8;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #FAFAF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(201, 151, 58, 0.15);
+            color: #C9973A;
+        }
+        
+        .nav-links a:last-child {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 8px 20px;
+        }
+        
+        .nav-links a:last-child:hover {
+            background: #B8860B;
+            color: #0D1117;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+                padding: 20px 0 10px;
+                margin-top: 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links.show {
+                display: flex;
+            }
+            
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .nav-links a:last-child {
+                background: #C9973A;
+                width: auto;
+                margin: 0 auto;
+                min-width: 150px;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .nav-links {
+                display: flex !important;
+            }
+        }
         
         .container {
             max-width: 800px;
@@ -96,24 +190,9 @@
             padding: 60px 24px;
         }
         
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 24px;
-            border-left: 4px solid #C9973A;
-            padding-left: 20px;
-        }
-        
-        h2 {
-            font-family: Georgia, serif;
-            font-size: 1.5rem;
-            margin: 40px 0 16px;
-        }
-        
         .author-image {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             background: #C9973A;
             display: flex;
@@ -124,10 +203,26 @@
             color: #0D1117;
         }
         
-        .bio {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 32px;
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 40px 0 16px;
+        }
+        
+        p {
+            margin-bottom: 1.2em;
+            font-size: 1.05rem;
+            color: #2D2D2D;
+            line-height: 1.7;
         }
         
         .pull-quote {
@@ -170,43 +265,79 @@
             margin: 32px 0;
         }
         
+        .contact-links h2 {
+            margin-top: 0;
+        }
+        
         .contact-link {
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 12px;
+            padding: 12px 16px;
             margin: 8px 0;
             background: white;
             border-radius: 12px;
             text-decoration: none;
             color: #1A1A1A;
+            transition: transform 0.2s;
+        }
+        
+        .contact-link:hover {
+            transform: translateX(5px);
+            background: #C9973A;
+            color: #0D1117;
         }
         
         footer {
             background: #0D1117;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             text-align: center;
-            padding: 32px;
+            padding: 32px 24px;
             margin-top: 60px;
         }
         
-        footer a { color: #C9973A; text-decoration: none; }
+        footer a {
+            color: #C9973A;
+            text-decoration: none;
+        }
         
         @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .container { padding: 40px 20px; }
-            .stats-grid { grid-template-columns: 1fr; }
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
 <nav class="nav">
-    <a href="/" class="nav-logo">David <span>Kiruo</span></a>
-    <div class="nav-links">
-        <a href="/chapters/">Chapters</a>
-        <a href="/about.html">About</a>
-        <a href="/buy.html">Buy</a>
+    <div class="nav-container">
+        <a href="/" class="nav-logo">David <span>Kiruo</span></a>
+        
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="/chapters/">Chapters</a>
+            <a href="/about.html">About</a>
+            <a href="/buy.html">Buy Book</a>
+            <a href="/contact.html">Contact</a>
+        </div>
     </div>
 </nav>
 
@@ -214,9 +345,9 @@
     <div class="author-image">📚</div>
     <h1>David Kiruo</h1>
     
-    <div class="bio">
-        <p>I am an SEO expert based in Nairobi, Kenya. I help businesses — from local shops to global brands — rank on Google without paying for ads.</p>
-    </div>
+    <p><strong>SEO Expert & Author | Nairobi, Kenya — For the World</strong></p>
+    
+    <p>I am an SEO expert based in Nairobi, Kenya. I help businesses — from local shops to global brands — rank on Google without paying for ads.</p>
     
     <div class="pull-quote">
         "I wrote SEO Mastery because when I was starting out, nobody gave me a guide that spoke to my reality. I had to figure it out alone. This book is everything I wish I knew on day one."
@@ -224,8 +355,11 @@
     
     <h2>My Journey</h2>
     <p>It was 2 AM in Nairobi. I was staring at a Google Analytics screen showing zero visitors for the third month in a row. I had built a website. Written content. Done everything YouTube told me. And yet — nothing.</p>
+    
     <p>I almost gave up that night. But I didn't. Instead, I decided to figure out SEO from the ground up. No shortcuts. No expensive courses. Just testing, failing, learning, and testing again.</p>
+    
     <p>Months later, things started shifting. A client in Westlands found me on Google. Then a client in the UK. Then a Kenyan e-commerce brand whose traffic I tripled in 90 days. Then another. And another.</p>
+    
     <p>Today, I help businesses across Africa and the world dominate their search results — using the exact strategies in this book.</p>
     
     <h2>My Mission</h2>
@@ -251,7 +385,7 @@
     </div>
     
     <div class="contact-links">
-        <h2 style="margin-top: 0;">📬 Let's Connect</h2>
+        <h2>📬 Let's Connect</h2>
         <a href="https://wa.me/254710346425" class="contact-link">
             <span>💬</span> WhatsApp: +254 710 346 425
         </a>
@@ -273,6 +407,25 @@
     <p>© 2025 David Kiruo — SEO Mastery: From Nairobi to the World</p>
     <p><strong>SEOMASTERY.WORLD</strong> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a> | <a href="/buy.html">Buy</a></p>
 </footer>
+
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
+</script>
 
 </body>
 </html>
