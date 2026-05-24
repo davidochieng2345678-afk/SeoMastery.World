@@ -9,15 +9,16 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://seomastery.world/">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="SEO Mastery: From Nairobi to the World | David Kiruo">
     <meta property="og:description" content="The SEO book written in Kenya for the world. 20 chapters, 300+ pages. Learn to dominate Google from anywhere.">
-    <meta property="og:image" content="https://seomastery.world/assets/images/book-cover.webp">
     <meta property="og:url" content="https://seomastery.world/">
-    <meta property="og:type" content="book">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="SEO Mastery by David Kiruo">
     
-    <!-- Schema markup for Book -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SEO Mastery: From Nairobi to the World">
+    <meta name="twitter:description" content="The SEO book written in Kenya for the world.">
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -26,21 +27,16 @@
         "author": {
             "@type": "Person",
             "name": "David Kiruo",
-            "url": "https://seomastery.world/about"
+            "url": "https://seomastery.world/about.html"
         },
         "description": "The complete SEO guide written from Kenya for the world. Learn how to rank your website on Google without paying for ads.",
         "numberOfPages": "319",
         "inLanguage": "en-KE",
-        "publisher": {
-            "@type": "Organization",
-            "name": "SEO Mastery Publishing"
-        },
         "offers": {
             "@type": "Offer",
             "price": "1500",
             "priceCurrency": "KES",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2025-12-31"
+            "availability": "https://schema.org/InStock"
         }
     }
     </script>
@@ -59,47 +55,137 @@
             line-height: 1.6;
         }
         
+        /* Navigation - Mobile First */
         .nav {
             background: #0D1117;
             padding: 16px 24px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
-        }
-        
-        .nav a {
-            color: #FAFAF8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 6px;
-        }
-        
-        .nav a:hover {
-            background: rgba(201, 151, 58, 0.2);
-            color: #C9973A;
         }
         
         .nav-logo {
             font-family: Georgia, serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
+            color: #FAFAF8;
+            text-decoration: none;
         }
         
         .nav-logo span {
             color: #C9973A;
         }
         
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #FAFAF8;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
         .nav-links {
             display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #FAFAF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(201, 151, 58, 0.15);
+            color: #C9973A;
+        }
+        
+        .nav-links a:last-child {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 8px 20px;
+        }
+        
+        .nav-links a:last-child:hover {
+            background: #B8860B;
+            color: #0D1117;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+                padding: 20px 0 10px;
+                margin-top: 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links.show {
+                display: flex;
+            }
+            
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .nav-links a:last-child {
+                background: #C9973A;
+                width: auto;
+                margin: 0 auto;
+                min-width: 150px;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .nav-toggle.active .hamburger:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .nav-links {
+                display: flex !important;
+            }
         }
         
         .hero {
@@ -109,7 +195,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 60px 24px;
+            padding: 80px 24px;
         }
         
         .hero-content {
@@ -286,14 +372,15 @@
             text-align: center;
         }
         
-        .footer {
+        footer {
             background: #0D1117;
             color: rgba(255, 255, 255, 0.5);
             text-align: center;
             padding: 32px 24px;
+            margin-top: 60px;
         }
         
-        .footer a {
+        footer a {
             color: #C9973A;
             text-decoration: none;
         }
@@ -304,7 +391,7 @@
             }
             
             .hero {
-                padding: 40px 20px;
+                padding: 60px 20px;
             }
             
             .container {
@@ -318,17 +405,31 @@
             .stats {
                 gap: 24px;
             }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
 <body>
 
 <nav class="nav">
-    <a href="/" class="nav-logo">David <span>Kiruo</span></a>
-    <div class="nav-links">
-        <a href="/chapters/">Chapters</a>
-        <a href="/about/">About</a>
-        <a href="/buy/">Buy Book</a>
+    <div class="nav-container">
+        <a href="/" class="nav-logo">David <span>Kiruo</span></a>
+        
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="/chapters/">Chapters</a>
+            <a href="/about.html">About</a>
+            <a href="/buy.html">Buy Book</a>
+            <a href="/contact.html">Contact</a>
+        </div>
     </div>
 </nav>
 
@@ -339,8 +440,8 @@
         <p class="tagline">"Written in Kenya. Read Around the Globe."</p>
         <p class="hero-desc">I spent years figuring out what actually works. This book is everything I know — 20 chapters, 300+ pages, zero fluff. Written for the world, from my home in Nairobi.</p>
         <div class="buttons">
-            <a href="/buy/" class="btn-primary">📖 Buy the Book — KES 1,500 / $12 USD</a>
-            <a href="/chapters/chapter-1/" class="btn-secondary">Read Free Sample →</a>
+            <a href="/buy.html" class="btn-primary">📖 Buy the Book — KES 1,500 / $12 USD</a>
+            <a href="/chapters/" class="btn-secondary">Read Free Sample →</a>
         </div>
         <div class="stats">
             <div><div class="stat-number">20</div><div class="stat-label">Chapters</div></div>
@@ -364,7 +465,7 @@
         <a href="/chapters/chapter-1/section-1.2/" class="chapter-card">
             <div class="chapter-number">Chapter 1 · Section 1.2</div>
             <div class="chapter-title">How Search Engines Actually Work</div>
-            <div class="chapter-desc">The three steps every SEO professional must understand.</div>
+            <div class="chapter-desc">The three processes every SEO professional must understand.</div>
         </a>
         <a href="/chapters/chapter-5/" class="chapter-card">
             <div class="chapter-number">Chapter 5 · Featured</div>
@@ -380,10 +481,29 @@
     </div>
 </main>
 
-<footer class="footer">
+<footer>
     <p>© 2025 David Kiruo — SEO Mastery: From Nairobi to the World</p>
-    <p><strong>SEOMASTERY.WORLD</strong> | <a href="/about/">About</a> | <a href="/contact/">Contact</a> | <a href="/buy/">Buy the Book</a></p>
+    <p><strong>SEOMASTERY.WORLD</strong> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a> | <a href="/buy.html">Buy</a></p>
 </footer>
+
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
+</script>
 
 </body>
 </html>
