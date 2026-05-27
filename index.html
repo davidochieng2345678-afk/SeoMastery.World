@@ -4,42 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEO Mastery: From Nairobi to the World | David Kiruo</title>
-    <meta name="description" content="The ultimate SEO book by David Kiruo — from Nairobi to the world. Learn to rank on Google and grow your business anywhere. Free chapters available.">
+    <meta name="description" content="The complete SEO mastery book by David Kiruo. Learn to rank on Google from Kenya to the world. 20 chapters of deep SEO knowledge.">
     <meta name="author" content="David Kiruo">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://seomastery.world/">
     
     <meta property="og:title" content="SEO Mastery: From Nairobi to the World | David Kiruo">
     <meta property="og:description" content="The SEO book written in Kenya for the world. 20 chapters, 300+ pages. Learn to dominate Google from anywhere.">
-    <meta property="og:url" content="https://seomastery.world/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SEO Mastery by David Kiruo">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SEO Mastery: From Nairobi to the World">
     <meta name="twitter:description" content="The SEO book written in Kenya for the world.">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Book",
-        "name": "SEO Mastery: From Nairobi to the World",
-        "author": {
-            "@type": "Person",
-            "name": "David Kiruo",
-            "url": "https://seomastery.world/about.html"
-        },
-        "description": "The complete SEO guide written from Kenya for the world. Learn how to rank your website on Google without paying for ads.",
-        "numberOfPages": "319",
-        "inLanguage": "en-KE",
-        "offers": {
-            "@type": "Offer",
-            "price": "1500",
-            "priceCurrency": "KES",
-            "availability": "https://schema.org/InStock"
-        }
-    }
-    </script>
     
     <style>
         * {
@@ -52,17 +29,17 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #FAFAF8;
             color: #1A1A1A;
-            line-height: 1.6;
+            line-height: 1.7;
+            scroll-behavior: smooth;
         }
         
-        /* Navigation - Mobile First */
         .nav {
             background: #0D1117;
             padding: 16px 24px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
         
         .nav-container {
@@ -72,6 +49,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 16px;
         }
         
         .nav-logo {
@@ -82,33 +60,12 @@
             text-decoration: none;
         }
         
-        .nav-logo span {
-            color: #C9973A;
-        }
-        
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            z-index: 1001;
-        }
-        
-        .hamburger {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: #FAFAF8;
-            margin: 5px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
+        .nav-logo span { color: #C9973A; }
         
         .nav-links {
             display: flex;
-            gap: 24px;
-            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         
         .nav-links a {
@@ -122,7 +79,7 @@
         }
         
         .nav-links a:hover {
-            background: rgba(201, 151, 58, 0.15);
+            background: rgba(201,151,58,0.15);
             color: #C9973A;
         }
         
@@ -132,81 +89,27 @@
             padding: 8px 20px;
         }
         
-        .nav-links a:last-child:hover {
-            background: #B8860B;
-            color: #0D1117;
-        }
-        
         @media (max-width: 768px) {
-            .nav-toggle {
-                display: block;
-            }
-            
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                gap: 8px;
-                padding: 20px 0 10px;
-                margin-top: 12px;
-                border-top: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            .nav-links.show {
-                display: flex;
-            }
-            
-            .nav-links a {
-                width: 100%;
-                text-align: center;
-                padding: 12px;
-            }
-            
-            .nav-links a:last-child {
-                background: #C9973A;
-                width: auto;
-                margin: 0 auto;
-                min-width: 150px;
-            }
-            
-            .nav-toggle.active .hamburger:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            
-            .nav-toggle.active .hamburger:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .nav-toggle.active .hamburger:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -7px);
-            }
-        }
-        
-        @media (min-width: 769px) {
-            .nav-links {
-                display: flex !important;
-            }
+            .nav-container { flex-direction: column; }
+            .nav-links { justify-content: center; }
         }
         
         .hero {
-            min-height: 80vh;
             background: #0D1117;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 100px 24px;
             text-align: center;
-            padding: 80px 24px;
         }
         
         .hero-content {
             max-width: 800px;
+            margin: 0 auto;
         }
         
         .badge {
             display: inline-block;
-            background: rgba(201, 151, 58, 0.15);
+            background: rgba(201,151,58,0.15);
             color: #C9973A;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -223,33 +126,23 @@
             margin-bottom: 16px;
         }
         
-        .h1-accent {
-            color: #C9973A;
-        }
+        .h1-accent { color: #C9973A; }
         
         .tagline {
             font-family: Georgia, serif;
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255,255,255,0.6);
             font-style: italic;
             margin-bottom: 24px;
         }
         
         .hero-desc {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.05rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
             margin-bottom: 32px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-        }
-        
-        .buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 48px;
         }
         
         .btn-primary {
@@ -259,22 +152,23 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            transition: transform 0.2s;
             display: inline-block;
+            margin: 0 8px 16px;
+            transition: transform 0.2s;
         }
         
-        .btn-primary:hover {
-            transform: translateY(-2px);
-        }
+        .btn-primary:hover { transform: translateY(-2px); }
         
         .btn-secondary {
-            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            border: 1.5px solid rgba(255,255,255,0.3);
             color: #FAFAF8;
             padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 500;
-            transition: border-color 0.2s;
+            display: inline-block;
+            margin: 0 8px 16px;
+            transition: all 0.2s;
         }
         
         .btn-secondary:hover {
@@ -287,6 +181,7 @@
             justify-content: center;
             gap: 48px;
             flex-wrap: wrap;
+            margin-top: 32px;
         }
         
         .stat-number {
@@ -299,136 +194,42 @@
         .stat-label {
             font-size: 0.7rem;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255,255,255,0.5);
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 60px 24px;
         }
         
-        .section-title {
-            font-family: Georgia, serif;
-            font-size: 2rem;
-            font-weight: 900;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: #6B7280;
-            margin-bottom: 48px;
-        }
-        
-        .chapter-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-        
-        .chapter-card {
-            background: #FAFAF8;
-            border: 1px solid #E5E7EB;
-            border-radius: 16px;
-            padding: 24px;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: block;
-        }
-        
-        .chapter-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-        
-        .chapter-number {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #C9973A;
-            margin-bottom: 8px;
-        }
-        
-        .chapter-title {
-            font-family: Georgia, serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #0D1117;
-            margin-bottom: 8px;
-        }
-        
-        .chapter-desc {
-            font-size: 0.85rem;
-            color: #6B7280;
-        }
-        
-        .kenya-section {
-            background: #F4EFE4;
-            border-radius: 24px;
-            padding: 48px;
-            margin: 48px 0;
-            text-align: center;
-        }
-        
         footer {
             background: #0D1117;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255,255,255,0.5);
             text-align: center;
             padding: 32px 24px;
-            margin-top: 60px;
         }
         
-        footer a {
-            color: #C9973A;
-            text-decoration: none;
-        }
+        footer a { color: #C9973A; text-decoration: none; }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .hero {
-                padding: 60px 20px;
-            }
-            
-            .container {
-                padding: 40px 20px;
-            }
-            
-            .kenya-section {
-                padding: 32px 20px;
-            }
-            
-            .stats {
-                gap: 24px;
-            }
-            
-            .section-title {
-                font-size: 1.6rem;
-            }
+            h1 { font-size: 2rem; }
+            .hero { padding: 60px 20px; }
+            .container { padding: 40px 20px; }
+            .stats { gap: 24px; }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
 <nav class="nav">
     <div class="nav-container">
-        <a href="/" class="nav-logo">David <span>Kiruo</span></a>
-        
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-        </button>
-        
-        <div class="nav-links" id="navLinks">
-            <a href="/chapters/">Chapters</a>
-            <a href="/about.html">About</a>
-            <a href="/buy.html">Buy Book</a>
-            <a href="/contact.html">Contact</a>
+        <a href="#" class="nav-logo">David <span>Kiruo</span></a>
+        <div class="nav-links">
+            <a href="#chapters">Chapters</a>
+            <a href="#about">About</a>
+            <a href="#buy">Buy Book</a>
         </div>
     </div>
 </nav>
@@ -439,9 +240,9 @@
         <h1>SEO <span class="h1-accent">Mastery</span><br>From Nairobi to the World</h1>
         <p class="tagline">"Written in Kenya. Read Around the Globe."</p>
         <p class="hero-desc">I spent years figuring out what actually works. This book is everything I know — 20 chapters, 300+ pages, zero fluff. Written for the world, from my home in Nairobi.</p>
-        <div class="buttons">
-            <a href="/buy.html" class="btn-primary">📖 Buy the Book — KES 1,500 / $12 USD</a>
-            <a href="/chapters/" class="btn-secondary">Read Free Sample →</a>
+        <div>
+            <a href="#buy" class="btn-primary">📖 Buy the Book — KES 1,500 / $12 USD</a>
+            <a href="#chapters" class="btn-secondary">Read Free Chapters ↓</a>
         </div>
         <div class="stats">
             <div><div class="stat-number">20</div><div class="stat-label">Chapters</div></div>
@@ -453,57 +254,16 @@
 </section>
 
 <main class="container">
-    <h2 class="section-title">Read Free Chapters</h2>
-    <p class="section-subtitle">Start your SEO journey today — no payment required.</p>
-    
-    <div class="chapter-grid">
-        <a href="/chapters/chapter-1/section-1.1/" class="chapter-card">
-            <div class="chapter-number">Chapter 1 · Section 1.1</div>
-            <div class="chapter-title">The Simple Definition Nobody Gives You</div>
-            <div class="chapter-desc">Learn what SEO really means — beyond the corporate jargon.</div>
-        </a>
-        <a href="/chapters/chapter-1/section-1.2/" class="chapter-card">
-            <div class="chapter-number">Chapter 1 · Section 1.2</div>
-            <div class="chapter-title">How Search Engines Actually Work</div>
-            <div class="chapter-desc">The three processes every SEO professional must understand.</div>
-        </a>
-        <a href="/chapters/chapter-5/" class="chapter-card">
-            <div class="chapter-number">Chapter 5 · Featured</div>
-            <div class="chapter-title">Local SEO for Any Market</div>
-            <div class="chapter-desc">Principles that work in Nairobi, New York, or New Delhi.</div>
-        </a>
-    </div>
-    
-    <div class="kenya-section">
-        <div style="font-size: 3rem; margin-bottom: 16px;">🌍</div>
-        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; margin-bottom: 16px;">From Nairobi. For the World.</h3>
-        <p style="max-width: 600px; margin: 0 auto; color: #3A3F4B;">This book was written in Nairobi, Kenya — but its principles work everywhere. Whether you're targeting your local neighbourhood or the entire globe, you'll find actionable strategies that deliver results.</p>
-    </div>
+    <!-- Part 2: Table of Contents will go here -->
+    <!-- Part 3: Section 1.1 will go here -->
+    <!-- Part 4: Section 1.2 will go here -->
+    <!-- Continue... -->
 </main>
 
 <footer>
     <p>© 2025 David Kiruo — SEO Mastery: From Nairobi to the World</p>
-    <p><strong>SEOMASTERY.WORLD</strong> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a> | <a href="/buy.html">Buy</a></p>
+    <p><strong>SEOMASTERY.WORLD</strong> | <a href="#">About</a> | <a href="#">Contact</a> | <a href="#buy">Buy</a></p>
 </footer>
-
-<script>
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('show');
-            navToggle.classList.toggle('active');
-        });
-        
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('show');
-                navToggle.classList.remove('active');
-            });
-        });
-    }
-</script>
 
 </body>
 </html>
