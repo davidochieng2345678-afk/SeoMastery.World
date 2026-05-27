@@ -1,1 +1,649 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Mastery: From Nairobi to the World | David Kiruo</title>
+    <meta name="description" content="The complete SEO mastery book by David Kiruo. Learn to rank on Google from Kenya to the world. 20 chapters of deep SEO knowledge.">
+    <meta name="author" content="David Kiruo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://seomastery.world/">
+    
+    <meta property="og:title" content="SEO Mastery: From Nairobi to the World | David Kiruo">
+    <meta property="og:description" content="The SEO book written in Kenya for the world. 20 chapters, 300+ pages. Learn to dominate Google from anywhere.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SEO Mastery by David Kiruo">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SEO Mastery: From Nairobi to the World">
+    <meta name="twitter:description" content="The SEO book written in Kenya for the world.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FAFAF8;
+            color: #1A1A1A;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+        
+        .nav {
+            background: #0D1117;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .nav-logo {
+            font-family: Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #FAFAF8;
+            text-decoration: none;
+        }
+        
+        .nav-logo span { color: #C9973A; }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: #FAFAF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(201,151,58,0.15);
+            color: #C9973A;
+        }
+        
+        .nav-links a:last-child {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 8px 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; }
+            .nav-links { justify-content: center; }
+        }
+        
+        .hero {
+            background: #0D1117;
+            padding: 100px 24px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(201,151,58,0.15);
+            color: #C9973A;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+        }
+        
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #FAFAF8;
+            margin-bottom: 16px;
+        }
+        
+        .h1-accent { color: #C9973A; }
+        
+        .tagline {
+            font-family: Georgia, serif;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.6);
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+        
+        .hero-desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-primary {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin: 0 8px 16px;
+            transition: transform 0.2s;
+        }
+        
+        .btn-primary:hover { transform: translateY(-2px); }
+        
+        .btn-secondary {
+            border: 1.5px solid rgba(255,255,255,0.3);
+            color: #FAFAF8;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0 8px 16px;
+            transition: all 0.2s;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #C9973A;
+            color: #C9973A;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+        
+        .stat-number {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #C9973A;
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .toc-section {
+            background: #F4EFE4;
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .toc-chapter {
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        
+        .toc-chapter-header {
+            background: #0D1117;
+            color: white;
+            padding: 16px 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .toc-links {
+            padding: 8px 0;
+        }
+        
+        .toc-links a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #2D2D2D;
+            border-bottom: 1px solid #F4EFE4;
+            transition: all 0.2s;
+        }
+        
+        .toc-links a:hover {
+            background: #F4EFE4;
+            padding-left: 30px;
+            color: #C9973A;
+        }
+        
+        .toc-links a:last-child {
+            border-bottom: none;
+        }
+        
+        .toc-badge {
+            float: right;
+            color: #C9973A;
+            font-size: 0.8rem;
+        }
+        
+        footer {
+            background: #0D1117;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 32px 24px;
+        }
+        
+        footer a { color: #C9973A; text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .hero { padding: 60px 20px; }
+            .container { padding: 40px 20px; }
+            .stats { gap: 24px; }
+            .toc-section { padding: 24px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
 
+<nav class="nav">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">David <span>Kiruo</span></a>
+        <div class="nav-links">
+            <a href="#chapters">Chapters</a>
+            <a href="#about">About</a>
+            <a href="#buy">Buy Book</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="badge">📖 The SEO Book the World Has Been Waiting For</div>
+        <h1>SEO <span class="h1-accent">Mastery</span><br>From Nairobi to the World</h1>
+        <p class="tagline">"Written in Kenya. Read Around the Globe."</p>
+        <p class="hero-desc">I spent years figuring out what actually works. This book is everything I know — 20 chapters, 300+ pages, zero fluff. Written for the world, from my home in Nairobi.</p>
+        <div>
+            <a href="#buy" class="btn-primary">📖 Buy the Book — KES 1,500 / $12 USD</a>
+            <a href="#chapters" class="btn-secondary">Read Free Chapters ↓</a>
+        </div>
+        <div class="stats">
+            <div><div class="stat-number">20</div><div class="stat-label">Chapters</div></div>
+            <div><div class="stat-number">300+</div><div class="stat-label">Pages</div></div>
+            <div><div class="stat-number">100%</div><div class="stat-label">Global Focus</div></div>
+            <div><div class="stat-number">🇰🇪</div><div class="stat-label">From Nairobi</div></div>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    
+    <!-- ============================================ -->
+    <!-- TABLE OF CONTENTS SECTION                     -->
+    <!-- ============================================ -->
+    
+    <section id="chapters" class="toc-section" style="scroll-margin-top: 80px;">
+        
+        <h2 style="font-family: Georgia, serif; font-size: 1.8rem; margin-bottom: 32px; text-align: center; color: #0D1117;">📖 Complete Table of Contents</h2>
+        <p style="text-align: center; margin-bottom: 40px; color: #4B5563;">20 chapters · 300+ pages · Free to read online</p>
+        
+        <!-- PART ONE -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.3rem; color: #C9973A; margin-bottom: 20px;">PART ONE · FOUNDATIONS</h3>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 1: What Is SEO and Why It Changed My Life</div>
+            <div class="toc-links">
+                <a href="#s1.1"><strong>1.1</strong> The Simple Definition Nobody Gives You <span class="toc-badge">→</span></a>
+                <a href="#s1.2"><strong>1.2</strong> How Search Engines Actually Work <span class="toc-badge">→</span></a>
+                <a href="#s1.3"><strong>1.3</strong> Crawling, Indexing & Ranking — Explained Simply <span class="toc-badge">→</span></a>
+                <a href="#s1.4"><strong>1.4</strong> The Google Algorithm: What I Learned the Hard Way <span class="toc-badge">→</span></a>
+                <a href="#s1.5"><strong>1.5</strong> Black Hat vs White Hat SEO — My Early Mistakes <span class="toc-badge">→</span></a>
+                <a href="#s1.6"><strong>1.6</strong> Why SEO Is the Greatest Long-Term Investment <span class="toc-badge">→</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 2: The SEO Mindset</div>
+            <div class="toc-links">
+                <a href="#"><strong>2.1</strong> Thinking Like Google <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>2.2</strong> Thinking Like Your Customer <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>2.3</strong> Patience, Consistency & the Long Game <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>2.4</strong> Why Most People Quit Before They See Results <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>2.5</strong> How I Stayed Motivated When Nothing Worked <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 3: Setting Up for SEO Success</div>
+            <div class="toc-links">
+                <a href="#"><strong>3.1</strong> Choosing the Right Domain Name <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>3.2</strong> Hosting That Supports SEO (Speed Matters) <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>3.3</strong> WordPress vs Other Platforms — My Recommendation <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>3.4</strong> Installing Essential SEO Plugins (Yoast, RankMath) <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>3.5</strong> Google Search Console Setup — Step by Step <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>3.6</strong> Google Analytics 4 Setup <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>3.7</strong> Bing Webmaster Tools <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <!-- PART TWO -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.3rem; color: #C9973A; margin: 40px 0 20px;">PART TWO · KEYWORD RESEARCH</h3>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 4: Keyword Research Mastery</div>
+            <div class="toc-links">
+                <a href="#"><strong>4.1</strong> What Are Keywords and Why They Are Everything <span class="toc-badge">🔒</span></a>
+                <a href="#"><strong>4.2</strong> Short-Tail vs Long-Tail Keywords <span class="toc-badge">🔒</span></a>
+                <a href="#"><strong>4.3</strong> Search Intent — The Concept That Transformed My Results <span class="toc-badge">🔒</span></a>
+                <a href="#"><strong>4.4</strong> How I Find Winning Keywords for Kenyan & African Markets <span class="toc-badge">🔒</span></a>
+                <a href="#"><strong>4.5</strong> Free Keyword Research Tools I Use Daily <span class="toc-badge">🔒</span></a>
+                <a href="#"><strong>4.6</strong> Paid Tools Worth Every Shilling (Ahrefs, SEMrush, Ubersuggest) <span class="toc-badge">🔒</span></a>
+                <a href="#"><strong>4.7</strong> Competitor Keyword Stealing — My Favourite Technique <span class="toc-badge">🔒</span></a>
+                <a href="#"><strong>4.8</strong> Building Your Keyword Map <span class="toc-badge">🔒</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 5: Local SEO & Kenyan Market Keywords</div>
+            <div class="toc-links">
+                <a href="#"><strong>5.1</strong> Why Local SEO Is a Goldmine in Kenya <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>5.2</strong> Geo-Targeting Nairobi, Mombasa, Kisumu & Beyond <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>5.3</strong> Swahili Keywords — An Untapped Opportunity <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>5.4</strong> Google My Business Optimisation <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>5.5</strong> Building Local Citations <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>5.6</strong> Reviews Strategy for Kenyan Businesses <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <!-- PART THREE -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.3rem; color: #C9973A; margin: 40px 0 20px;">PART THREE · ON-PAGE SEO</h3>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 6: On-Page SEO Fundamentals</div>
+            <div class="toc-links">
+                <a href="#"><strong>6.1</strong> Title Tags — The Most Important 60 Characters <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>6.2</strong> Meta Descriptions That Get Clicks <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>6.3</strong> Header Tags (H1–H6) Done Right <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>6.4</strong> URL Structure Best Practices <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>6.5</strong> Keyword Placement & Density (Without Stuffing) <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>6.6</strong> Internal Linking Strategy <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>6.7</strong> Image Optimisation — Alt Text, File Names, Compression <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>6.8</strong> Schema Markup — My Secret Weapon for Rich Snippets <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 7: Content That Ranks</div>
+            <div class="toc-links">
+                <a href="#"><strong>7.1</strong> Why Content Is Still King (But Context Is Queen) <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>7.2</strong> The Skyscraper Technique — How I Beat Established Sites <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>7.3</strong> Writing for Humans AND Search Engines <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>7.4</strong> Content-Length: How Long Should Your Posts Be? <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>7.5</strong> E-E-A-T: Experience, Expertise, Authority, Trust <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>7.6</strong> Pillar Pages & Content Clusters <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>7.7</strong> Evergreen Content vs Trending Content <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>7.8</strong> How I Plan 3 Months of Content in One Afternoon <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>7.9</strong> AI Tools in Content Creation — Opportunities & Risks <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 8: Technical On-Page SEO</div>
+            <div class="toc-links">
+                <a href="#"><strong>8.1</strong> Core Web Vitals — What They Are and Why Google Cares <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>8.2</strong> Page Speed Optimisation (My Checklist) <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>8.3</strong> Mobile-First Indexing <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>8.4</strong> Structured Data & Rich Results <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>8.5</strong> Canonical Tags — Avoiding Duplicate Content <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>8.6</strong> Robots.txt & XML Sitemaps <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>8.7</strong> Breadcrumb Navigation <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <!-- PART FOUR -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.3rem; color: #C9973A; margin: 40px 0 20px;">PART FOUR · TECHNICAL SEO</h3>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 9: Technical SEO Deep Dive</div>
+            <div class="toc-links">
+                <a href="#"><strong>9.1</strong> Website Architecture That Google Loves <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>9.2</strong> Crawl Budget — What It Is and Why It Matters <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>9.3</strong> 301 vs 302 Redirects <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>9.4</strong> HTTPS & SSL — Non-Negotiable Security <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>9.5</strong> Fixing Broken Links (404 Errors) <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>9.6</strong> Hreflang for Multilingual Sites <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>9.7</strong> Log File Analysis — Advanced Crawl Insights <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>9.8</strong> JavaScript SEO — Common Pitfalls <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 10: Site Audits — Finding & Fixing What's Broken</div>
+            <div class="toc-links">
+                <a href="#"><strong>10.1</strong> How to Conduct a Full SEO Audit <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>10.2</strong> Tools I Use: Screaming Frog, Sitebulb, Ahrefs <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>10.3</strong> Prioritising Fixes for Maximum Impact <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>10.4</strong> My Personal Site Audit Checklist (50+ Points) <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>10.5</strong> Reporting Audit Results to Clients <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <!-- PART FIVE -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.3rem; color: #C9973A; margin: 40px 0 20px;">PART FIVE · OFF-PAGE SEO</h3>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 11: Link Building — The Art & Science</div>
+            <div class="toc-links">
+                <a href="#"><strong>11.1</strong> Why Backlinks Are Still Google's #1 Ranking Factor <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>11.2</strong> The Difference Between Good Links and Toxic Links <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>11.3</strong> Guest Posting — How I Got Published on 50+ Sites <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>11.4</strong> HARO (Help a Reporter Out) Strategy <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>11.5</strong> Broken Link Building <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>11.6</strong> Digital PR & Earning Editorial Links <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>11.7</strong> Resource Page Link Building <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>11.8</strong> Link Building for African & Kenyan Websites <span class="toc-badge">⭐</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 12: Brand Authority & E-E-A-T</div>
+            <div class="toc-links">
+                <a href="#"><strong>12.1</strong> Building Your Personal Brand as an SEO Expert <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>12.2</strong> Social Signals — Do They Impact Rankings? <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>12.3</strong> Mentions, Citations & Unlinked Brand Mentions <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>12.4</strong> Speaking, Podcasts & PR as SEO Strategies <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>12.5</strong> How I Built My Reputation in the Kenyan Market <span class="toc-badge">⭐</span></a>
+            </div>
+        </div>
+        
+        <!-- PART SIX -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.3rem; color: #C9973A; margin: 40px 0 20px;">PART SIX · ADVANCED SEO</h3>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 13: SEO for Specific Industries</div>
+            <div class="toc-links">
+                <a href="#"><strong>13.1</strong> SEO for E-Commerce (WooCommerce & Shopify) <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>13.2</strong> SEO for Service Businesses in Kenya <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>13.3</strong> SEO for Blogs & Content Sites <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>13.4</strong> SEO for SaaS & Tech Startups <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>13.5</strong> SEO for NGOs & Non-Profits <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>13.6</strong> Real Estate SEO in Nairobi <span class="toc-badge">⭐</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 14: Video & YouTube SEO</div>
+            <div class="toc-links">
+                <a href="#"><strong>14.1</strong> Why YouTube Is the Second Largest Search Engine <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>14.2</strong> Optimising Video Titles, Tags & Descriptions <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>14.3</strong> Thumbnails That Drive Clicks <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>14.4</strong> Embedding YouTube Videos for SEO Boost <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>14.5</strong> My YouTube Strategy for the Kenyan Market <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 15: Voice Search & Future SEO</div>
+            <div class="toc-links">
+                <a href="#"><strong>15.1</strong> The Rise of Voice Search in Africa <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>15.2</strong> Optimising for Featured Snippets & Position Zero <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>15.3</strong> AI & Google's SGE (Search Generative Experience) <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>15.4</strong> SEO in the Age of ChatGPT <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>15.5</strong> What Will SEO Look Like in 2030? <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 16: SEO Analytics & Reporting</div>
+            <div class="toc-links">
+                <a href="#"><strong>16.1</strong> Key SEO Metrics That Actually Matter <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>16.2</strong> Google Search Console — Advanced Use <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>16.3</strong> Google Analytics 4 — SEO Reports <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>16.4</strong> Rank Tracking Tools & How I Use Them <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>16.5</strong> Creating Client Reports That Impress <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>16.6</strong> Proving ROI on SEO <span class="toc-badge">⭐</span></a>
+            </div>
+        </div>
+        
+        <!-- PART SEVEN -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.3rem; color: #C9973A; margin: 40px 0 20px;">PART SEVEN · SEO AS A BUSINESS</h3>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 17: Freelance SEO — How I Built My Business in Kenya</div>
+            <div class="toc-links">
+                <a href="#"><strong>17.1</strong> Starting Out with Zero Clients <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>17.2</strong> Pricing Your SEO Services in the Kenyan Market <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>17.3</strong> Finding Clients Locally and Internationally <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>17.4</strong> Proposals That Win Projects <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>17.5</strong> Managing Client Expectations <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>17.6</strong> Scaling from Freelancer to Agency <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>17.7</strong> Tools That Run My Business <span class="toc-badge">⭐</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 18: SEO Case Studies — My Real Results</div>
+            <div class="toc-links">
+                <a href="#"><strong>18.1</strong> Case Study 1: Ranking a Nairobi Business #1 in 90 Days <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>18.2</strong> Case Study 2: E-Commerce SEO That Tripled Sales <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>18.3</strong> Case Study 3: Blogging Income Through SEO <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>18.4</strong> Case Study 4: International Client Won Through Google <span class="toc-badge">⭐</span></a>
+                <a href="#"><strong>18.5</strong> Lessons Learned from My Biggest SEO Failures <span class="toc-badge">⭐</span></a>
+            </div>
+        </div>
+        
+        <!-- PART EIGHT -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.3rem; color: #C9973A; margin: 40px 0 20px;">PART EIGHT · RESOURCES & TOOLS</h3>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 19: The Ultimate SEO Toolkit</div>
+            <div class="toc-links">
+                <a href="#"><strong>19.1</strong> Free Tools Every SEO Needs <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>19.2</strong> Premium Tools Worth Investing In <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>19.3</strong> Chrome Extensions for SEO <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>19.4</strong> AI Tools That Supercharge SEO Work <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>19.5</strong> Communities, Blogs & Podcasts I Follow <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <div class="toc-chapter">
+            <div class="toc-chapter-header">Chapter 20: Action Plan — Your 90-Day SEO Roadmap</div>
+            <div class="toc-links">
+                <a href="#"><strong>20.1</strong> Days 1–30: Foundation & Research <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>20.2</strong> Days 31–60: Content & On-Page Optimisation <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>20.3</strong> Days 61–90: Link Building & Technical Fixes <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>20.4</strong> Tracking Progress & Adjusting Strategy <span class="toc-badge">📖</span></a>
+                <a href="#"><strong>20.5</strong> Beyond 90 Days — Sustaining & Scaling <span class="toc-badge">📖</span></a>
+            </div>
+        </div>
+        
+        <!-- Legend -->
+        <div style="margin-top: 40px; padding: 20px; background: white; border-radius: 12px; text-align: center; font-size: 0.85rem; color: #6B7280;">
+            <span style="margin: 0 12px;">📖 Free to read</span>
+            <span style="margin: 0 12px;">🔒 Email required to access</span>
+            <span style="margin: 0 12px;">⭐ Premium (full book purchase)</span>
+        </div>
+        
+        <!-- Back to Top -->
+        <div style="text-align: center; margin-top: 32px;">
+            <a href="#" style="color: #C9973A; text-decoration: none; font-weight: 600;"><i class="fas fa-arrow-up"></i> Back to Top</a>
+        </div>
+        
+    </section>
+    
+    <!-- SECTION 1.1 WILL GO HERE -->
+    <!-- SECTION 1.2 WILL GO HERE -->
+    <!-- SECTION 1.3 WILL GO HERE -->
+    <!-- SECTION 1.4 WILL GO HERE -->
+    <!-- SECTION 1.5 WILL GO HERE -->
+    <!-- SECTION 1.6 WILL GO HERE -->
+    
+    <!-- BUY SECTION WILL GO HERE -->
+    
+</main>
+
+<footer>
+    <p>© 2025 David Kiruo — SEO Mastery: From Nairobi to the World</p>
+    <p><strong>SEOMASTERY.WORLD</strong> | <a href="#">About</a> | <a href="#">Contact</a> | <a href="#buy">Buy</a></p>
+</footer>
+
+<!-- WhatsApp Widget -->
+<div style="position: fixed; bottom: 24px; right: 24px; z-index: 1000;">
+    <div id="waPopup" style="position: absolute; bottom: 70px; right: 0; background: white; border-radius: 16px; padding: 16px; width: 260px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); display: none; font-size: 0.85rem;">
+        <p style="font-weight: 700; margin-bottom: 8px;">💬 Hi! I'm David Kiruo</p>
+        <p style="margin-bottom: 12px;">Questions about the book? Chat with me on WhatsApp.</p>
+        <a href="https://wa.me/254710346425?text=Hi%20David,%20I%20have%20a%20question%20about%20SEO%20Mastery" style="background: #25D366; color: white; padding: 8px 16px; border-radius: 50px; text-decoration: none; display: inline-block; font-size: 0.8rem;">Message on WhatsApp →</a>
+    </div>
+    <button id="waButton" style="background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: none; cursor: pointer;">
+        <i class="fab fa-whatsapp" style="font-size: 2rem; color: white;"></i>
+    </button>
+</div>
+
+<script>
+    // WhatsApp widget toggle
+    const waButton = document.getElementById('waButton');
+    const waPopup = document.getElementById('waPopup');
+    if (waButton && waPopup) {
+        waButton.addEventListener('click', function() {
+            waPopup.style.display = waPopup.style.display === 'none' ? 'block' : 'none';
+        });
+        document.addEventListener('click', function(e) {
+            if (!waButton.contains(e.target) && !waPopup.contains(e.target)) {
+                waPopup.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
