@@ -18579,7 +18579,1002 @@ Host: https://seomastery.world
     </div>
     
 </section>
+    <!-- ============================================ -->
+<!-- SECTION 9.3: 301 VS 302 REDIRECTS -->
+<!-- ============================================ -->
+
+<section id="s9.3" style="scroll-margin-top: 80px; margin-bottom: 80px;" itemscope itemtype="https://schema.org/Article">
+    
+    <!-- Section header with back to TOC button -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 24px;">
+        <h2 style="font-family: Georgia, serif; font-size: 2rem; font-weight: 700; border-left: 4px solid #C9973A; padding-left: 20px; margin: 0;" itemprop="headline">9.3 301 vs 302 Redirects</h2>
+        <a href="#chapters" style="background: #C9973A; color: #0D1117; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-arrow-up"></i> Back to TOC</a>
+    </div>
+    
+    <meta itemprop="description" content="Complete guide to 301 and 302 redirects for SEO. Learn the difference between redirect types and how using the wrong one can hurt your rankings.">
+    <meta itemprop="datePublished" content="2025-01-15">
+    <meta itemprop="author" content="David Kiruo">
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <meta itemprop="name" content="SEO Mastery by David Kiruo">
+        <meta itemprop="url" content="https://seomastery.world">
+    </div>
+    
+    <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;"><strong>By David Kiruo</strong> | Nairobi, Kenya — For the World</p>
+    
+    <!-- INTRO -->
+    <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">You have moved a page. You have changed your domain. You have deleted old content. Now what?</p>
+    
+    <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">If you do not set up redirects, visitors will see <strong>404 errors</strong>. Google will lose track of your pages. Your rankings will drop.</p>
+    
+    <div style="background: #F4EFE4; border-left: 4px solid #C9973A; padding: 20px 24px; margin: 24px 0; border-radius: 0 12px 12px 0;" itemscope itemtype="https://schema.org/Quote">
+        <meta itemprop="text" content="A 301 redirect is permanent. A 302 redirect is temporary. Using the wrong one can cost you years of SEO progress.">
+        <p style="font-weight: 700; margin-bottom: 8px;">🔄 The Redirect Rule</p>
+        <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;">A <strong>301 redirect</strong> is permanent. A <strong>302 redirect</strong> is temporary. Using the wrong one can cost you years of SEO progress.</p>
+    </div>
+    
+    <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">In this section, I will teach you the difference between <strong>301 and 302 redirects</strong> — and why choosing the right one is critical for your SEO.</p>
+    
+    <!-- WHAT IS A REDIRECT -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">What Is a Redirect? (The Simple Explanation)</h3>
+    
+    <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">A <strong>redirect</strong> is a way to send visitors and search engines from one URL to another. When someone visits an old URL, they are automatically taken to a new URL.</p>
+    
+    <div style="background: #0D1117; border-radius: 12px; padding: 20px; margin: 24px 0;">
+        <p style="color: white; text-align: center; font-family: monospace;">https://example.com/old-page → 301 redirect → https://example.com/new-page</p>
+    </div>
+    
+    <!-- 301 VS 302 COMPARISON -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">301 vs 302: The Critical Difference</h3>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0;">
         
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; color: white;">
+            <div style="background: #006B3F; display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 700; margin-bottom: 12px;">PERMANENT</div>
+            <p style="font-size: 1.5rem; font-weight: 900; color: #006B3F; margin-bottom: 8px;">301 Redirect</p>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem;">"This page has moved permanently. Update your records."</p>
+            <ul style="margin-top: 16px; margin-left: 20px; color: rgba(255,255,255,0.6); font-size: 0.8rem;">
+                <li style="margin-bottom: 8px;">✅ Passes 90-99% of link equity (SEO value)</li>
+                <li style="margin-bottom: 8px;">✅ Google updates its index to the new URL</li>
+                <li style="margin-bottom: 8px;">✅ Used for permanent moves</li>
+                <li style="margin-bottom: 0;">✅ Recommended for most redirects</li>
+            </ul>
+        </div>
+        
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; color: white;">
+            <div style="background: #C9973A; display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 700; margin-bottom: 12px;">TEMPORARY</div>
+            <p style="font-size: 1.5rem; font-weight: 900; color: #C9973A; margin-bottom: 8px;">302 Redirect</p>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem;">"This page has moved temporarily. Keep the old URL in your index."</p>
+            <ul style="margin-top: 16px; margin-left: 20px; color: rgba(255,255,255,0.6); font-size: 0.8rem;">
+                <li style="margin-bottom: 8px;">⚠️ Passes little to no link equity</li>
+                <li style="margin-bottom: 8px;">⚠️ Google keeps the old URL in its index</li>
+                <li style="margin-bottom: 8px;">✅ Used for temporary moves (site maintenance, A/B tests)</li>
+                <li style="margin-bottom: 0;">❌ NOT recommended for permanent moves</li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    <!-- WHEN TO USE EACH REDIRECT -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">When to Use 301 vs 302 (Decision Guide)</h3>
+    
+    <div class="table-wrapper" style="overflow-x: auto; margin: 24px 0;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <thead>
+                <tr style="background: #0D1117; color: white;">
+                    <th style="padding: 12px; text-align: left; border: 1px solid #333;">Scenario</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid #333;">Use 301 or 302?</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid #333;">Why</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #FAFAF8;">
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Changing domain name (old.com → new.com)</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB; color: #006B3F; font-weight: 700;">301 Permanent</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Move is permanent. You want Google to transfer rankings.</td>
+                </table>
+                <tr style="background: #F4EFE4;">
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Moving a page to a new URL (old-page → new-page)</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB; color: #006B3F; font-weight: 700;">301 Permanent</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">You are not moving it back. Pass SEO value to new URL.</td>
+                </tr>
+                <tr style="background: #FAFAF8;">
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">HTTP to HTTPS (http:// → https://)</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB; color: #006B3F; font-weight: 700;">301 Permanent</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">HTTPS is permanent. You want Google to use secure version.</td>
+                </tr>
+                <tr style="background: #F4EFE4;">
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">WWW to non-WWW (or vice versa)</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB; color: #006B3F; font-weight: 700;">301 Permanent</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Choose one version permanently. Redirect the other.</td>
+                </tr>
+                <tr style="background: #FAFAF8;">
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Site maintenance (coming soon page)</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB; color: #C9973A; font-weight: 700;">302 Temporary</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Site will be back. Do not want Google to remove old pages.</td>
+                </tr>
+                <tr style="background: #F4EFE4;">
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">A/B testing different page versions</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB; color: #C9973A; font-weight: 700;">302 Temporary</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Testing is temporary. Old URL will come back.</td>
+                <tr>
+                <tr style="background: #FAFAF8;">
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Seasonal pages (Christmas landing page)</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB; color: #C9973A; font-weight: 700;">302 Temporary</td>
+                    <td style="padding: 10px 12px; border: 1px solid #E5E7EB;">Page will return next year. Use 302 for temporary redirects.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- KENYA REDIRECT DISASTER STORY -->
+    <div style="background: #F0F4F0; border: 1px solid #006B3F; border-radius: 16px; padding: 24px 28px; margin: 32px 0;" itemscope itemtype="https://schema.org/CreativeWork">
+        <h4 style="color: #006B3F; margin-top: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chart-line"></i> 🇰🇪 Kenya Case Study — The E-commerce Store That Used 302 Instead of 301 (And Lost 6 Months of SEO)</h4>
+        <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">An <strong>e-commerce store in Nairobi</strong> moved their site from old-domain.com to new-domain.com. Their developer used <strong>302 redirects</strong> instead of 301.</p>
+        <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">For 6 months, they wondered why their new domain was not ranking. Their old domain still appeared in search results. Traffic had dropped 80%.</p>
+        <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;"><strong>What we did:</strong> We checked their redirects. Found the 302s. Changed them to <strong>301 permanent redirects</strong>.</p>
+        <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;"><strong>Result:</strong> Within 60 days, their new domain started ranking. Traffic slowly returned. They lost 6 months of SEO progress because of one wrong redirect type.</p>
+        <p style="margin-bottom: 0; font-size: 1rem; line-height: 1.7;"><strong>Lesson:</strong> Using 302 instead of 301 is a common mistake. <strong>For permanent moves, ALWAYS use 301 redirects.</strong></p>
+        <meta itemprop="headline" content="E-commerce store lost 6 months of SEO by using 302 redirects">
+        <meta itemprop="description" content="Nairobi e-commerce store used 302 redirects for a permanent domain move and lost 6 months of SEO progress. Fixed with 301 redirects.">
+    </div>
+    
+    <!-- HOW TO SET UP REDIRECTS -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">How to Set Up Redirects (4 Methods)</h3>
+    
+    <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+        
+        <div style="margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="background: #C9973A; color: #0D1117; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</span>
+                <span style="color: white; font-weight: 700;">Using RankMath or Yoast (Easiest)</span>
+            </div>
+            <p style="margin-left: 44px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">In RankMath, go to RankMath → Redirections. Add old URL and new URL. Choose 301 or 302. Save. (Yoast Premium also has redirects).</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="background: #C9973A; color: #0D1117; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</span>
+                <span style="color: white; font-weight: 700;">Using .htaccess (Apache Servers)</span>
+            </div>
+            <p style="margin-left: 44px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Add this line to your .htaccess file:</p>
+            <div style="background: #1A1A1A; border-radius: 6px; padding: 10px; margin-left: 44px; margin-top: 8px;">
+                <pre style="color: #C9973A; font-family: monospace; font-size: 0.7rem; margin: 0;">Redirect 301 /old-page https://seomastery.world/new-page</pre>
+            </div>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="background: #C9973A; color: #0D1117; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</span>
+                <span style="color: white; font-weight: 700;">Using Nginx Server</span>
+            </div>
+            <p style="margin-left: 44px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Add this to your Nginx config:</p>
+            <div style="background: #1A1A1A; border-radius: 6px; padding: 10px; margin-left: 44px; margin-top: 8px;">
+                <pre style="color: #C9973A; font-family: monospace; font-size: 0.7rem; margin: 0;">rewrite ^/old-page$ https://seomastery.world/new-page permanent;</pre>
+            </div>
+        </div>
+        
+        <div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="background: #C9973A; color: #0D1117; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">4</span>
+                <span style="color: white; font-weight: 700;">Using HTML Meta Refresh (Not Recommended)</span>
+            </div>
+            <p style="margin-left: 44px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Add to old page's &lt;head&gt; section. This is slow and bad for SEO. Only use if no other option.</p>
+            <div style="background: #1A1A1A; border-radius: 6px; padding: 10px; margin-left: 44px; margin-top: 8px;">
+                <pre style="color: #C9973A; font-family: monospace; font-size: 0.7rem; margin: 0;">&lt;meta http-equiv="refresh" content="0; url=https://seomastery.world/new-page"&gt;</pre>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- REDIRECT CHAINS -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Redirect Chains: What They Are and Why to Avoid Them</h3>
+    
+    <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">A <strong>redirect chain</strong> happens when URL A redirects to URL B, which redirects to URL C. Each redirect slows down the user and wastes link equity.</p>
+    
+    <div style="background: #F4EFE4; border-radius: 16px; padding: 28px; margin: 24px 0;">
+        <div style="margin-bottom: 20px;">
+            <p style="font-weight: 700;">❌ Bad: Redirect Chain</p>
+            <p style="font-family: monospace; background: white; padding: 10px; border-radius: 6px;">old-page.com → old-page.com/new → website.com/new-page</p>
+            <p style="color: #BB0000; font-size: 0.8rem;">2 redirects = slower load time = lost link equity</p>
+        </div>
+        <div>
+            <p style="font-weight: 700;">✅ Good: Direct Redirect</p>
+            <p style="font-family: monospace; background: white; padding: 10px; border-radius: 6px;">old-page.com → website.com/new-page</p>
+            <p style="color: #006B3F; font-size: 0.8rem;">1 redirect = faster = maximum link equity passed</p>
+        </div>
+    </div>
+    
+    <!-- COMMON REDIRECT MISTAKES -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Common Redirect Mistakes (And How to Avoid Them)</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0;">
+        
+        <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+            <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+            <p style="font-weight: 700; margin-bottom: 4px;">Using 302 for Permanent Moves</p>
+            <p style="font-size: 0.8rem;">Loses SEO value. Google keeps old URL in index. <strong>Fix:</strong> Use 301 for permanent moves.</p>
+        </div>
+        
+        <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+            <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+            <p style="font-weight: 700; margin-bottom: 4px;">Redirect Chains</p>
+            <p style="font-size: 0.8rem;">A → B → C (multiple hops). <strong>Fix:</strong> Redirect directly to final destination.</p>
+        </div>
+        
+        <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+            <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+            <p style="font-weight: 700; margin-bottom: 4px;">Redirect Loops</p>
+            <p style="font-size: 0.8rem;">A → B → A (never ends). <strong>Fix:</strong> Check your redirects. Break the loop.</p>
+        </div>
+        
+        <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+            <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+            <p style="font-weight: 700; margin-bottom: 4px;">Redirecting to 404 Pages</p>
+            <p style="font-size: 0.8rem;">Old URL redirects to a page that does not exist. <strong>Fix:</strong> Always test destination URLs.</p>
+        </div>
+        
+        <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+            <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+            <p style="font-weight: 700; margin-bottom: 4px;">Not Updating Internal Links</p>
+            <p style="font-size: 0.8rem;">Internal links still point to old URLs. <strong>Fix:</strong> Update your own site's links to new URLs.</p>
+        </div>
+        
+        <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+            <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+            <p style="font-weight: 700; margin-bottom: 4px;">Deleting Old Pages Without Redirects</p>
+            <p style="font-size: 0.8rem;">Causes 404 errors. <strong>Fix:</strong> Always redirect deleted pages to relevant new pages.</p>
+        </div>
+        
+    </div>
+    
+    <!-- HOW TO CHECK YOUR REDIRECTS -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">How to Check Your Redirects (Free Tools)</h3>
+    
+    <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+        <div style="margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">🛠️</span>
+                <span style="color: white; font-weight: 700;">Redirect Path (Chrome Extension)</span>
+            </div>
+            <p style="margin-left: 40px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Shows redirect type and status code for any URL. Free Chrome extension.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">🔍</span>
+                <span style="color: white; font-weight: 700;">HTTP Status Checker (Online Tool)</span>
+            </div>
+            <p style="margin-left: 40px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Enter any URL. See if it returns 200, 301, 302, or 404. Free.</p>
+        </div>
+        <div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">📊</span>
+                <span style="color: white; font-weight: 700;">Screaming Frog (Free Version)</span>
+            </div>
+            <p style="margin-left: 40px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Crawl your site. Filter by "Status Code" to see all redirects. Identify chains and loops.</p>
+        </div>
+    </div>
+    
+    <!-- YOUR REDIRECT CHECKLIST -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Your Redirect Checklist (Print This)</h3>
+    
+    <div style="background: #F4EFE4; border-radius: 16px; padding: 28px; margin: 24px 0;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div>
+                <p>✅ Use 301 for permanent moves (domain change, page move, HTTPS, WWW)</p>
+                <p>✅ Use 302 for temporary moves (maintenance, A/B testing, seasonal pages)</p>
+                <p>✅ Redirect old URLs directly to new URLs (no chains)</p>
+            </div>
+            <div>
+                <p>✅ Update internal links to point to new URLs</p>
+                <p>✅ Test all redirects after implementation</p>
+                <p>✅ Never redirect to 404 pages</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SCHEMA MARKUP FOR THIS SECTION -->
+    <div style="display: none;" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="301 vs 302 Redirects">
+        <meta itemprop="description" content="Complete guide to 301 and 302 redirects for SEO. Learn the difference between redirect types and how using the wrong one can hurt your rankings.">
+        <meta itemprop="datePublished" content="2025-01-15">
+        <meta itemprop="author" content="David Kiruo">
+    </div>
+    
+    <!-- KEY TAKEAWAY -->
+    <div style="background: #0D1117; color: #FAFAF8; padding: 32px; margin: 48px 0 32px; border-radius: 16px; display: flex; gap: 24px; align-items: flex-start;">
+        <div style="font-size: 2.5rem; flex-shrink: 0;">🔑</div>
+        <div>
+            <h4 style="color: #C9973A; margin-top: 0; margin-bottom: 12px; font-size: 1.3rem;">David's Key Takeaway</h4>
+            <p style="color: rgba(255,255,255,0.85); margin-bottom: 12px; font-size: 1rem; line-height: 1.7;"><strong>Choosing the wrong redirect type can destroy your SEO progress.</strong> Use 301 for permanent moves. Use 302 for temporary moves.</p>
+            <p style="color: rgba(255,255,255,0.85); margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">When in doubt, use <strong>301</strong>. A permanent redirect on a temporary page is better than a temporary redirect on a permanent move.</p>
+            <p style="color: rgba(255,255,255,0.85); margin-bottom: 0; font-size: 1rem; line-height: 1.7;">Avoid redirect chains. Redirect directly to the final destination. Test your redirects. <strong>A broken redirect is as bad as a broken link.</strong></p>
+        </div>
+    </div>
+    
+    <!-- CONCLUSION -->
+    <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">What Comes Next</h3>
+    
+    <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">Now that you understand redirects, the next step is securing your site with <strong>HTTPS and SSL</strong>. In <strong>Section 9.4</strong>, I will teach you why HTTPS is a ranking factor and how to set it up correctly.</p>
+    
+    <p style="margin-bottom: 0; font-size: 1.05rem; line-height: 1.8; font-style: italic;">— David Kiruo, Nairobi, Kenya — For the World</p>
+    
+    <!-- Back to top link -->
+    <div style="text-align: center; margin-top: 32px;">
+        <a href="#chapters" style="color: #C9973A; text-decoration: none; font-weight: 600;"><i class="fas fa-arrow-up"></i> Back to Table of Contents</a>
+    </div>
+    
+</section>
+    <!-- ============================================ -->
+    <!-- SECTION 9.4: HTTPS & SSL — NON-NEGOTIABLE SECURITY -->
+    <!-- ============================================ -->
+    
+    <section id="s9.4" style="scroll-margin-top: 80px; margin-bottom: 80px;" itemscope itemtype="https://schema.org/HowTo">
+        
+        <!-- Section header with back to TOC button -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 24px;">
+            <h2 style="font-family: Georgia, serif; font-size: 2rem; font-weight: 700; border-left: 4px solid #C9973A; padding-left: 20px; margin: 0;" itemprop="name">9.4 HTTPS & SSL — Non-Negotiable Security</h2>
+            <a href="#chapters" style="background: #C9973A; color: #0D1117; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-arrow-up"></i> Back to TOC</a>
+        </div>
+        
+        <meta itemprop="description" content="Complete guide to HTTPS and SSL for SEO. Learn why HTTPS is a ranking factor and how to set up SSL certificates on your website.">
+        
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="David Kiruo">
+            <meta itemprop="jobTitle" content="SEO Expert">
+            <meta itemprop="address" content="Nairobi, Kenya">
+        </div>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;"><strong>By David Kiruo</strong> | Nairobi, Kenya — For the World</p>
+        
+        <!-- INTRO -->
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">Look at your browser's address bar right now. Do you see a padlock icon? Does the URL start with <strong>https://</strong> or <strong>http://</strong>?</p>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">If you see "Not Secure" or just "http://", you have a problem. A big problem.</p>
+        
+        <div style="background: #F4EFE4; border-left: 4px solid #C9973A; padding: 20px 24px; margin: 24px 0; border-radius: 0 12px 12px 0;" itemscope itemtype="https://schema.org/Quote">
+            <meta itemprop="text" content="HTTPS is a confirmed Google ranking factor. Sites without HTTPS are marked as 'Not Secure' in browsers. Users leave. Rankings drop.">
+            <p style="font-weight: 700; margin-bottom: 8px;">🔒 The HTTPS Rule</p>
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;"><strong>HTTPS is a confirmed Google ranking factor.</strong> Sites without HTTPS are marked as <strong>"Not Secure"</strong> in browsers. Users leave. Rankings drop.</p>
+        </div>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">In this section, I will teach you why <strong>HTTPS and SSL</strong> are non-negotiable for SEO — and how to set them up correctly.</p>
+        
+        <!-- WHAT ARE HTTPS AND SSL -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">What Are HTTPS and SSL? (The Simple Explanation)</h3>
+        
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <p style="color: #C9973A; font-weight: 700; margin-bottom: 8px;">🔒 SSL (Secure Sockets Layer)</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem;">A digital certificate that encrypts data between your website and your visitors. It protects passwords, credit card numbers, and personal information.</p>
+                    <div style="background: #1A1A1A; border-radius: 6px; padding: 10px; margin-top: 12px;">
+                        <p style="color: #C9973A; font-size: 0.7rem; margin-bottom: 0;">Think of SSL as a secure, sealed envelope instead of a postcard anyone can read.</p>
+                    </div>
+                </div>
+                <div>
+                    <p style="color: #C9973A; font-weight: 700; margin-bottom: 8px;">🌐 HTTPS (Hypertext Transfer Protocol Secure)</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem;">The secure version of HTTP. It tells browsers that your site uses SSL encryption.</p>
+                    <div style="background: #1A1A1A; border-radius: 6px; padding: 10px; margin-top: 12px;">
+                        <p style="color: #C9973A; font-size: 0.7rem; margin-bottom: 0;">HTTPS = HTTP + SSL. The padlock icon in your browser.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- WHY HTTPS MATTERS FOR SEO -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Why HTTPS Matters for SEO (5 Critical Reasons)</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0;">
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">📈</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">Confirmed Ranking Factor</p>
+                <p style="font-size: 0.85rem;">Google has confirmed that HTTPS is a ranking signal. Sites with HTTPS get a slight ranking boost over HTTP sites.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">⚠️</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">"Not Secure" Warning</p>
+                <p style="font-size: 0.85rem;">Browsers mark HTTP sites as "Not Secure". This scares users away. They will not enter credit card or personal information.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">🤝</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">User Trust</p>
+                <p style="font-size: 0.85rem;">The padlock icon builds trust. Users know their data is safe. They are more likely to buy, sign up, or contact you.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">📊</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">Referrer Data</p>
+                <p style="font-size: 0.85rem;">HTTPS to HTTPS referrals pass full referrer data. HTTP to HTTPS loses referrer data. This affects your analytics.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">🌐</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">Future-Proofing</p>
+                <p style="font-size: 0.85rem;">HTTP is being phased out. New browser features (like service workers, geolocation, push notifications) require HTTPS.</p>
+            </div>
+            
+        </div>
+        
+        <!-- KENYA HTTPS DISASTER STORY -->
+        <div style="background: #F0F4F0; border: 1px solid #006B3F; border-radius: 16px; padding: 24px 28px; margin: 32px 0;" itemscope itemtype="https://schema.org/CreativeWork">
+            <h4 style="color: #006B3F; margin-top: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chart-line"></i> 🇰🇪 Kenya Case Study — The E-commerce Store That Lost 50% of Sales After Chrome Labelled Them "Not Secure"</h4>
+            <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">A <strong>Nairobi e-commerce store</strong> selling electronics had been using HTTP for years. They thought it was fine. Then Chrome started labelling HTTP sites as "Not Secure".</p>
+            <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">Their conversion rate dropped by <strong>50%</strong>. Customers were abandoning their carts at checkout. They did not trust the site.</p>
+            <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;"><strong>What we did:</strong></p>
+            <ul style="margin: 0 0 12px 20px; font-size: 0.9rem;">
+                <li>Purchased and installed an SSL certificate (free from hosting provider)</li>
+                <li>Set up 301 redirects from HTTP to HTTPS</li>
+                <li>Updated all internal links to use HTTPS</li>
+                <li>Updated Google Search Console with new HTTPS property</li>
+            </ul>
+            <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;"><strong>Result:</strong> The "Not Secure" warning disappeared. The padlock appeared. Conversion rate returned to normal within 30 days. Sales recovered.</p>
+            <p style="margin-bottom: 0; font-size: 1rem; line-height: 1.7;"><strong>Lesson:</strong> The "Not Secure" warning destroys customer trust. <strong>HTTPS is not optional. It is essential for sales.</strong></p>
+            <meta itemprop="headline" content="E-commerce store lost 50% of sales due to "Not Secure" warning">
+            <meta itemprop="description" content="Nairobi e-commerce store lost half their sales after Chrome labelled their HTTP site as "Not Secure". Fixed with SSL and HTTPS redirects.">
+        </div>
+        
+        <!-- HOW TO GET AN SSL CERTIFICATE -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">How to Get an SSL Certificate (Free Options Available)</h3>
+        
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</span>
+                    <span style="color: white; font-weight: 700;">Free SSL from Hosting Provider</span>
+                </div>
+                <p style="margin-left: 40px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Most good hosts offer free SSL certificates (Let's Encrypt). Check your hosting control panel. Look for "SSL" or "HTTPS". Enable it with one click.</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</span>
+                    <span style="color: white; font-weight: 700;">Cloudflare Free SSL</span>
+                </div>
+                <p style="margin-left: 40px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Sign up for free Cloudflare account. Point your domain to Cloudflare. Enable "Always Use HTTPS". Cloudflare provides free SSL.</p>
+            </div>
+            <div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</span>
+                    <span style="color: white; font-weight: 700;">Paid SSL (Premium Options)</span>
+                </div>
+                <p style="margin-left: 40px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">For e-commerce or sites handling sensitive data, consider paid SSL from Comodo, DigiCert, or Sectigo ($10-200/year). These offer warranties and better validation.</p>
+            </div>
+        </div>
+        
+        <!-- HOW TO MIGRATE FROM HTTP TO HTTPS -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;" itemprop="step">How to Migrate from HTTP to HTTPS (Step by Step)</h3>
+        
+        <div style="background: #F4EFE4; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</span>
+                    <span style="font-weight: 700;">Install SSL Certificate</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">Enable SSL through your hosting provider or Cloudflare. Wait for it to activate (usually 5-30 minutes).</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</span>
+                    <span style="font-weight: 700;">Set Up 301 Redirects from HTTP to HTTPS</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">Add this to your .htaccess file (Apache):</p>
+                <div style="background: #0D1117; border-radius: 6px; padding: 10px; margin-left: 40px; margin-top: 8px;">
+                    <pre style="color: #C9973A; font-family: monospace; font-size: 0.65rem; margin: 0;">RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]</pre>
+                </div>
+                <p style="margin-left: 40px; margin-top: 8px; font-size: 0.8rem;">Or use RankMath: RankMath → General Settings → Links → Force HTTPS.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</span>
+                    <span style="font-weight: 700;">Update WordPress Settings</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">Go to Settings → General. Change WordPress Address and Site Address to <strong>https://</strong> (not http://).</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">4</span>
+                    <span style="font-weight: 700;">Update Internal Links</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">Use a plugin like Better Search Replace to update all internal links from http:// to https://. This prevents mixed content warnings.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">5</span>
+                    <span style="font-weight: 700;">Update Google Search Console</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">Add new property: <strong>https://seomastery.world</strong> (not http). Submit your sitemap again.</p>
+            </div>
+            
+            <div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">6</span>
+                    <span style="font-weight: 700;">Test Your HTTPS</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">Use <strong>whynopadlock.com</strong> to check for mixed content issues. Use <strong>SSL Labs</strong> to test SSL strength.</p>
+            </div>
+            
+        </div>
+        
+        <!-- MIXED CONTENT WARNINGS -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Mixed Content Warnings (What They Are and How to Fix Them)</h3>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">A <strong>mixed content warning</strong> happens when your HTTPS page loads HTTP resources (images, scripts, stylesheets). The padlock disappears. Users see a warning.</p>
+        
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            <div style="margin-bottom: 16px;">
+                <p style="color: #BB0000; font-weight: 700;">❌ Example of Mixed Content</p>
+                <p style="color: rgba(255,255,255,0.7); font-family: monospace; font-size: 0.8rem;">&lt;img src="http://example.com/image.jpg"&gt;</p>
+                <p style="color: #BB0000; font-size: 0.75rem;">This causes a mixed content warning. Padlock disappears.</p>
+            </div>
+            <div>
+                <p style="color: #006B3F; font-weight: 700;">✅ Fixed Version</p>
+                <p style="color: rgba(255,255,255,0.7); font-family: monospace; font-size: 0.8rem;">&lt;img src="https://example.com/image.jpg"&gt;</p>
+                <p style="color: #006B3F; font-size: 0.75rem;">Use relative URLs or update to HTTPS.</p>
+            </div>
+        </div>
+        
+        <div class="kenya-box" style="background: #F0F4F0; border: 1px solid #006B3F; border-radius: 16px; padding: 24px 28px; margin: 32px 0;">
+            <h4 style="color: #006B3F; margin-top: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">🛠️ How to Fix Mixed Content</h4>
+            <ul style="margin-left: 20px; font-size: 0.85rem;">
+                <li style="margin-bottom: 6px;">✅ Use Relative URLs: <strong>/images/image.jpg</strong> instead of <strong>http://example.com/image.jpg</strong></li>
+                <li style="margin-bottom: 6px;">✅ Use protocol-relative URLs: <strong>//example.com/image.jpg</strong> (but this is outdated)</li>
+                <li style="margin-bottom: 6px;">✅ Use Better Search Replace plugin to update all URLs</li>
+                <li style="margin-bottom: 0;">✅ Check with <strong>whynopadlock.com</strong> to identify issues</li>
+            </ul>
+        </div>
+        
+        <!-- COMMON HTTPS MISTAKES -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Common HTTPS Mistakes (And How to Avoid Them)</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0;">
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Using 302 Instead of 301</p>
+                <p style="font-size: 0.8rem;">Temporary redirect loses SEO value. <strong>Fix:</strong> Use 301 permanent redirect for HTTPS migration.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Mixed Content Issues</p>
+                <p style="font-size: 0.8rem;">Padlock disappears. Users see warning. <strong>Fix:</strong> Update all HTTP resources to HTTPS.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Not Updating Google Search Console</p>
+                <p style="font-size: 0.8rem;">Google still crawls HTTP version. <strong>Fix:</strong> Add HTTPS property to Search Console.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Expired SSL Certificate</p>
+                <p style="font-size: 0.8rem;">Certificate expired. Browser shows security warning. <strong>Fix:</strong> Set calendar reminder to renew SSL annually.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Not Updating Hardcoded URLs</p>
+                <p style="font-size: 0.8rem;">Theme files or database still have http:// links. <strong>Fix:</strong> Use search and replace plugin.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Blocking HTTPS in Robots.txt</p>
+                <p style="font-size: 0.8rem;">Accidentally blocking Google from HTTPS version. <strong>Fix:</strong> Check robots.txt.</p>
+            </div>
+            
+        </div>
+        
+        <!-- YOUR HTTPS CHECKLIST -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Your HTTPS Migration Checklist (Print This)</h3>
+        
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div>
+                    <p>✅ Install SSL certificate (free from host or Cloudflare)</p>
+                    <p>✅ Set up 301 redirects from HTTP → HTTPS</p>
+                    <p>✅ Update WordPress Address and Site Address to HTTPS</p>
+                    <p>✅ Update all internal links (use Better Search Replace)</p>
+                </div>
+                <div>
+                    <p>✅ Add HTTPS property to Google Search Console</p>
+                    <p>✅ Submit sitemap again</p>
+                    <p>✅ Test with whynopadlock.com</p>
+                    <p>✅ Update external backlinks where possible</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SCHEMA MARKUP FOR THIS SECTION -->
+        <div style="display: none;" itemscope itemtype="https://schema.org/Article">
+            <meta itemprop="headline" content="HTTPS & SSL — Non-Negotiable Security">
+            <meta itemprop="description" content="Complete guide to HTTPS and SSL for SEO. Learn why HTTPS is a ranking factor and how to set up SSL certificates on your website.">
+            <meta itemprop="datePublished" content="2025-01-15">
+            <meta itemprop="author" content="David Kiruo">
+        </div>
+        
+        <!-- KEY TAKEAWAY -->
+        <div style="background: #0D1117; color: #FAFAF8; padding: 32px; margin: 48px 0 32px; border-radius: 16px; display: flex; gap: 24px; align-items: flex-start;">
+            <div style="font-size: 2.5rem; flex-shrink: 0;">🔑</div>
+            <div>
+                <h4 style="color: #C9973A; margin-top: 0; margin-bottom: 12px; font-size: 1.3rem;">David's Key Takeaway</h4>
+                <p style="color: rgba(255,255,255,0.85); margin-bottom: 12px; font-size: 1rem; line-height: 1.7;"><strong>HTTPS is not optional. It is a ranking factor, a trust signal, and a security requirement.</strong> Sites without HTTPS are marked "Not Secure". Users leave. Rankings drop.</p>
+                <p style="color: rgba(255,255,255,0.85); margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">Get a free SSL certificate from your hosting provider or Cloudflare. Set up 301 redirects. Update all internal links. Test with whynopadlock.com.</p>
+                <p style="color: rgba(255,255,255,0.85); margin-bottom: 0; font-size: 1rem; line-height: 1.7;"><strong>If your site is still on HTTP, stop everything and fix it today.</strong> Your rankings and your customers depend on it.</p>
+            </div>
+        </div>
+        
+        <!-- CONCLUSION -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">What Comes Next</h3>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">Now that your site is secure with HTTPS, the next step is <strong>fixing broken links</strong>. In <strong>Section 9.5</strong>, I will teach you how to find and fix 404 errors and broken links — so you stop wasting crawl budget and losing customers.</p>
+        
+        <p style="margin-bottom: 0; font-size: 1.05rem; line-height: 1.8; font-style: italic;">— David Kiruo, Nairobi, Kenya — For the World</p>
+        
+        <!-- Back to top link -->
+        <div style="text-align: center; margin-top: 32px;">
+            <a href="#chapters" style="color: #C9973A; text-decoration: none; font-weight: 600;"><i class="fas fa-arrow-up"></i> Back to Table of Contents</a>
+        </div>
+        
+    </section>
+    <!-- ============================================ -->
+    <!-- SECTION 9.5: FIXING BROKEN LINKS — 404 ERRORS -->
+    <!-- ============================================ -->
+    
+    <section id="s9.5" style="scroll-margin-top: 80px; margin-bottom: 80px;" itemscope itemtype="https://schema.org/HowTo">
+        
+        <!-- Section header with back to TOC button -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 24px;">
+            <h2 style="font-family: Georgia, serif; font-size: 2rem; font-weight: 700; border-left: 4px solid #C9973A; padding-left: 20px; margin: 0;" itemprop="name">9.5 Fixing Broken Links — 404 Errors</h2>
+            <a href="#chapters" style="background: #C9973A; color: #0D1117; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-arrow-up"></i> Back to TOC</a>
+        </div>
+        
+        <meta itemprop="description" content="Complete guide to fixing broken links and 404 errors for SEO. Learn how to find, fix, and prevent broken links on your website.">
+        
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="David Kiruo">
+            <meta itemprop="jobTitle" content="SEO Expert">
+            <meta itemprop="address" content="Nairobi, Kenya">
+        </div>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;"><strong>By David Kiruo</strong> | Nairobi, Kenya — For the World</p>
+        
+        <!-- INTRO -->
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">Clicking a link and landing on a "404 Page Not Found" is frustrating. For users. For Google. For your business.</p>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">Every broken link is a lost customer, a wasted crawl budget, and a negative signal to Google.</p>
+        
+        <div style="background: #F4EFE4; border-left: 4px solid #C9973A; padding: 20px 24px; margin: 24px 0; border-radius: 0 12px 12px 0;" itemscope itemtype="https://schema.org/Quote">
+            <meta itemprop="text" content="A 404 error tells Google that your site has dead ends. Too many 404s tell Google that your site is poorly maintained. Both hurt your rankings.">
+            <p style="font-weight: 700; margin-bottom: 8px;">🔗 The Broken Link Truth</p>
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;">A <strong>404 error</strong> tells Google that your site has dead ends. Too many 404s tell Google that your site is poorly maintained. Both hurt your rankings.</p>
+        </div>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">In this section, I will teach you how to <strong>find, fix, and prevent broken links</strong> on your website.</p>
+        
+        <!-- WHAT ARE BROKEN LINKS -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">What Are Broken Links? (The Simple Explanation)</h3>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">A <strong>broken link</strong> is a hyperlink that points to a page that no longer exists. When clicked, it returns a <strong>404 error</strong> (Page Not Found).</p>
+        
+        <div style="background: #0D1117; border-radius: 12px; padding: 20px; margin: 24px 0;">
+            <p style="color: white; text-align: center; font-family: monospace;">https://example.com/deleted-page → 404 Not Found</p>
+        </div>
+        
+        <div class="kenya-box" style="background: #F0F4F0; border: 1px solid #006B3F; border-radius: 16px; padding: 24px 28px; margin: 32px 0;">
+            <h4 style="color: #006B3F; margin-top: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">🔗 Types of Broken Links</h4>
+            <ul style="margin-left: 20px; font-size: 0.85rem;">
+                <li style="margin-bottom: 6px;"><strong>Internal broken links:</strong> Links from one page on your site to another page on your site that is missing</li>
+                <li style="margin-bottom: 6px;"><strong>External broken links:</strong> Links from your site to other websites that no longer exist</li>
+                <li style="margin-bottom: 6px;"><strong>Inbound broken links:</strong> Links from other websites to pages on your site that no longer exist</li>
+                <li style="margin-bottom: 0;"><strong>Image broken links:</strong> Images that fail to load because the file is missing</li>
+            </ul>
+        </div>
+        
+        <!-- WHY BROKEN LINKS HURT SEO -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Why Broken Links Hurt Your SEO (5 Reasons)</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0;">
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">🕷️</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">Wasted Crawl Budget</p>
+                <p style="font-size: 0.85rem;">Googlebot follows broken links and hits 404s. This wastes your crawl budget on dead pages instead of important content.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">🔗</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">Lost Link Equity</p>
+                <p style="font-size: 0.85rem;">Backlinks pointing to broken pages lose their SEO value. The link equity (authority) disappears into a 404.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">👤</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">Poor User Experience</p>
+                <p style="font-size: 0.85rem;">Users click a link expecting information. They get a 404 error. They leave. Many never return.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">📉</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">Lower PageRank Distribution</p>
+                <p style="font-size: 0.85rem;">Internal links passing through broken pages waste authority that could have gone to good pages.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 24px;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+                <p style="font-weight: 700; margin-bottom: 8px;">Trust Signals</p>
+                <p style="font-size: 0.85rem;">Google sees broken links as a sign of a poorly maintained site. This reduces trust and authority.</p>
+            </div>
+            
+        </div>
+        
+        <!-- KENYA BROKEN LINKS DISASTER STORY -->
+        <div style="background: #F0F4F0; border: 1px solid #006B3F; border-radius: 16px; padding: 24px 28px; margin: 32px 0;" itemscope itemtype="https://schema.org/CreativeWork">
+            <h4 style="color: #006B3F; margin-top: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><i class="fas fa-chart-line"></i> 🇰🇪 Kenya Case Study — The News Site That Lost 40% of Traffic to Broken Links</h4>
+            <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">A <strong>Kenyan news website</strong> redesigned their site and changed all URL structures. They did not set up redirects. Thousands of old URLs became 404s.</p>
+            <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">Google had indexed 50,000 old URLs. All of them were now broken. Backlinks from other news sites pointed to 404s. Crawl budget was wasted on thousands of dead pages.</p>
+            <p style="margin-bottom: 12px; font-size: 1rem; line-height: 1.7;"><strong>Result:</strong> Their organic traffic dropped by <strong>40%</strong> within 30 days. It took <strong>6 months</strong> to recover after setting up redirects.</p>
+            <p style="margin-bottom: 0; font-size: 1rem; line-height: 1.7;"><strong>Lesson:</strong> <strong>Never delete pages without redirects.</strong> Every deleted page needs a 301 redirect to the most relevant new page. Broken links destroy traffic.</p>
+            <meta itemprop="headline" content="News site lost 40% of traffic due to broken links">
+            <meta itemprop="description" content="Kenyan news site redesigned without redirects, lost 40% of organic traffic, and took 6 months to recover.">
+        </div>
+        
+        <!-- HOW TO FIND BROKEN LINKS -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">How to Find Broken Links (Free Tools)</h3>
+        
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</span>
+                    <span style="color: white; font-weight: 700;">Google Search Console (Free)</span>
+                </div>
+                <p style="margin-left: 44px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Go to "Pages" → "Not found (404)". Google lists every 404 error it has found on your site. This is your starting point.</p>
+            </div>
+            
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</span>
+                    <span style="color: white; font-weight: 700;">Screaming Frog (Free up to 500 URLs)</span>
+                </div>
+                <p style="margin-left: 44px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Crawl your entire site. Filter by "Status Code" → "Client Error (4xx)". See all broken links on your site.</p>
+            </div>
+            
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</span>
+                    <span style="color: white; font-weight: 700;">Broken Link Checker (WordPress Plugin)</span>
+                </div>
+                <p style="margin-left: 44px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Free plugin that scans your site for broken links and notifies you when new ones appear. Use with caution — can slow down your site.</p>
+            </div>
+            
+            <div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #C9973A; color: #0D1117; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">4</span>
+                    <span style="color: white; font-weight: 700;">Dr. Link Check (Online Tool)</span>
+                </div>
+                <p style="margin-left: 44px; color: rgba(255,255,255,0.7); font-size: 0.85rem;">Free online tool. Enter your URL. It scans your site and reports all broken links.</p>
+            </div>
+            
+        </div>
+        
+        <!-- HOW TO FIX BROKEN LINKS -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">How to Fix Broken Links (3 Methods)</h3>
+        
+        <div style="background: #F4EFE4; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #006B3F; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</span>
+                    <span style="font-weight: 700;">Method 1: Redirect (Best for Important Pages)</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">If the page has backlinks or traffic, set up a <strong>301 redirect</strong> to the most relevant existing page.</p>
+                <div style="background: #0D1117; border-radius: 6px; padding: 10px; margin-left: 40px; margin-top: 8px;">
+                    <pre style="color: #C9973A; font-family: monospace; font-size: 0.7rem; margin: 0;">Redirect 301 /old-deleted-page https://seomastery.world/new-relevant-page</pre>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #006B3F; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</span>
+                    <span style="font-weight: 700;">Method 2: Restore the Page</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">If the page was deleted by mistake, restore it from backup. This is the simplest fix.</p>
+            </div>
+            
+            <div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="background: #006B3F; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</span>
+                    <span style="font-weight: 700;">Method 3: Update or Remove the Link</span>
+                </div>
+                <p style="margin-left: 40px; font-size: 0.85rem;">For internal links, update the link to point to the correct URL. Remove links to pages that no longer exist and have no replacement.</p>
+            </div>
+            
+        </div>
+        
+        <!-- HOW TO PREVENT BROKEN LINKS -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">How to Prevent Broken Links (Best Practices)</h3>
+        
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            <ul style="margin-left: 20px; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                <li style="margin-bottom: 12px;">✅ <strong>Never delete pages without redirects.</strong> Always add 301 redirects to relevant new pages.</li>
+                <li style="margin-bottom: 12px;">✅ <strong>Use relative URLs for internal links.</strong> Instead of "https://example.com/page", use "/page". This prevents breakage if you change domains.</li>
+                <li style="margin-bottom: 12px;">✅ <strong>Check external links regularly.</strong> Websites change. Use a tool to monitor external links quarterly.</li>
+                <li style="margin-bottom: 12px;">✅ <strong>Set up a custom 404 page.</strong> When users hit a broken link, help them find what they need.</li>
+                <li style="margin-bottom: 12px;">✅ <strong>Schedule monthly broken link checks.</strong> Use Google Search Console and Screaming Frog monthly.</li>
+                <li style="margin-bottom: 0;">✅ <strong>Use canonical tags for moved content.</strong> If content moves to a new URL, use canonical tags alongside redirects.</li>
+            </ul>
+        </div>
+        
+        <!-- CUSTOM 404 PAGE TEMPLATE -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Custom 404 Page Template (Copy This)</h3>
+        
+        <div style="background: #F4EFE4; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            <p style="font-weight: 700; margin-bottom: 8px;">📄 Save this as <strong>404.html</strong> in your root folder</p>
+            <div style="background: #0D1117; border-radius: 8px; padding: 20px; overflow-x: auto;">
+                <pre style="color: #C9973A; font-family: monospace; font-size: 0.65rem; margin: 0; white-space: pre-wrap;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en-KE"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Not Found | SEO Mastery&lt;/title&gt;
+    &lt;meta name="robots" content="noindex, follow"&gt;
+    &lt;style&gt;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FAFAF8;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        h1 { font-size: 4rem; color: #C9973A; margin-bottom: 16px; }
+        .btn {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 8px;
+        }
+        .search-box input {
+            padding: 12px;
+            width: 250px;
+            border: 1px solid #E5E7EB;
+            border-radius: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;404&lt;/h1&gt;
+    &lt;h2&gt;Page Not Found&lt;/h2&gt;
+    &lt;p&gt;Sorry, the page you are looking for does not exist or has been moved.&lt;/p&gt;
+    &lt;a href="/" class="btn"&gt;🏠 Go Home&lt;/a&gt;
+    &lt;a href="/chapters/" class="btn"&gt;📖 Browse Chapters&lt;/a&gt;
+    &lt;div class="search-box"&gt;
+        &lt;input type="text" id="search" placeholder="Search SEO Mastery..."&gt;
+        &lt;button onclick="searchSite()"&gt;Search&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        function searchSite() {
+            const query = document.getElementById('search').value;
+            if (query) {
+                window.location.href = 'https://www.google.com/search?q=site:seomastery.world ' + encodeURIComponent(query);
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+        
+        <!-- COMMON BROKEN LINK MISTAKES -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Common Broken Link Mistakes (And How to Avoid Them)</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0;">
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Deleting Pages Without Redirects</p>
+                <p style="font-size: 0.8rem;">Creates 404s. <strong>Fix:</strong> Always 301 redirect deleted pages.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Redirecting to Irrelevant Pages</p>
+                <p style="font-size: 0.8rem;">User expects A, gets B. <strong>Fix:</strong> Redirect to the most relevant page.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Ignoring External Broken Links</p>
+                <p style="font-size: 0.8rem;">Links to other sites that no longer exist. <strong>Fix:</strong> Update or remove external broken links.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">No Custom 404 Page</p>
+                <p style="font-size: 0.8rem;">Users hit dead end. <strong>Fix:</strong> Create helpful 404 page with search and navigation.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Not Monitoring Search Console</p>
+                <p style="font-size: 0.8rem;">404s go unnoticed. <strong>Fix:</strong> Check Search Console monthly.</p>
+            </div>
+            
+            <div style="background: #F4EFE4; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 1.8rem; margin-bottom: 8px;">❌</div>
+                <p style="font-weight: 700; margin-bottom: 4px;">Redirect Loops</p>
+                <p style="font-size: 0.8rem;">A → B → A. <strong>Fix:</strong> Test redirects after setting them up.</p>
+            </div>
+            
+        </div>
+        
+        <!-- YOUR BROKEN LINK CHECKLIST -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">Your Broken Link Checklist (Print This)</h3>
+        
+        <div style="background: #0D1117; border-radius: 16px; padding: 28px; margin: 24px 0;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div>
+                    <p>✅ Check Google Search Console "Not found" report monthly</p>
+                    <p>✅ Run Screaming Frog crawl quarterly</p>
+                    <p>✅ Set up 301 redirects for all deleted pages</p>
+                    <p>✅ Create custom 404.html page</p>
+                </div>
+                <div>
+                    <p>✅ Update or remove external broken links</p>
+                    <p>✅ Fix image broken links (missing files)</p>
+                    <p>✅ Test all redirects after implementation</p>
+                    <p>✅ Never delete pages without redirects</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SCHEMA MARKUP FOR THIS SECTION -->
+        <div style="display: none;" itemscope itemtype="https://schema.org/Article">
+            <meta itemprop="headline" content="Fixing Broken Links — 404 Errors">
+            <meta itemprop="description" content="Complete guide to fixing broken links and 404 errors for SEO. Learn how to find, fix, and prevent broken links on your website.">
+            <meta itemprop="datePublished" content="2025-01-15">
+            <meta itemprop="author" content="David Kiruo">
+        </div>
+        
+        <!-- KEY TAKEAWAY -->
+        <div style="background: #0D1117; color: #FAFAF8; padding: 32px; margin: 48px 0 32px; border-radius: 16px; display: flex; gap: 24px; align-items: flex-start;">
+            <div style="font-size: 2.5rem; flex-shrink: 0;">🔑</div>
+            <div>
+                <h4 style="color: #C9973A; margin-top: 0; margin-bottom: 12px; font-size: 1.3rem;">David's Key Takeaway</h4>
+                <p style="color: rgba(255,255,255,0.85); margin-bottom: 12px; font-size: 1rem; line-height: 1.7;"><strong>Broken links destroy user experience, waste crawl budget, and hurt your rankings.</strong> Every 404 is a lost opportunity.</p>
+                <p style="color: rgba(255,255,255,0.85); margin-bottom: 12px; font-size: 1rem; line-height: 1.7;">Check Google Search Console monthly. Run Screaming Frog quarterly. Never delete pages without 301 redirects. Create a helpful custom 404 page.</p>
+                <p style="color: rgba(255,255,255,0.85); margin-bottom: 0; font-size: 1rem; line-height: 1.7;"><strong>A well-maintained site has no broken links.</strong> Google notices. Your customers notice. Fix your broken links today.</p>
+            </div>
+        </div>
+        
+        <!-- CONCLUSION -->
+        <h3 style="font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px; color: #0D1117;">What Comes Next</h3>
+        
+        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">Now that your broken links are fixed, the next step is <strong>hreflang for multilingual sites</strong>. In <strong>Section 9.6</strong>, I will teach you how to target multiple languages and countries — essential if you serve customers in Kenya, the UK, the US, or anywhere else.</p>
+        
+        <p style="margin-bottom: 0; font-size: 1.05rem; line-height: 1.8; font-style: italic;">— David Kiruo, Nairobi, Kenya — For the World</p>
+        
+        <!-- Back to top link -->
+        <div style="text-align: center; margin-top: 32px;">
+            <a href="#chapters" style="color: #C9973A; text-decoration: none; font-weight: 600;"><i class="fas fa-arrow-up"></i> Back to Table of Contents</a>
+        </div>
+        
+    </section>
+    
 
                         
     
