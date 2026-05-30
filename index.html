@@ -18808,5 +18808,198 @@ Host: https://seomastery.world
 
 </script>
 
+    <!-- ============================================ -->
+<!-- SOCIAL SHARING BUTTONS (Floating Sidebar)     -->
+<!-- ============================================ -->
+
+<style>
+    /* Floating Social Share Bar */
+    .social-share-bar {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: white;
+        padding: 12px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border: 1px solid #E5E7EB;
+    }
+    
+    .social-share-bar a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: transform 0.2s, background 0.2s;
+        font-size: 1.2rem;
+    }
+    
+    .social-share-bar a:hover {
+        transform: scale(1.1);
+    }
+    
+    .share-whatsapp { background: #25D366; color: white; }
+    .share-twitter { background: #1DA1F2; color: white; }
+    .share-linkedin { background: #0077B5; color: white; }
+    .share-facebook { background: #1877F2; color: white; }
+    .share-email { background: #6B7280; color: white; }
+    
+    /* Mobile: Bottom bar instead of side bar */
+    @media (max-width: 768px) {
+        .social-share-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: auto;
+            bottom: 0;
+            transform: none;
+            flex-direction: row;
+            justify-content: center;
+            border-radius: 0;
+            padding: 10px;
+            gap: 20px;
+            background: white;
+            border-top: 1px solid #E5E7EB;
+            z-index: 1000;
+        }
+        
+        .social-share-bar a {
+            width: 44px;
+            height: 44px;
+            font-size: 1.3rem;
+        }
+        
+        /* Add padding to body so content isn't hidden behind bar */
+        body {
+            padding-bottom: 70px;
+        }
+    }
+    
+    /* Desktop: adjust container margin if sidebar is present */
+    @media (min-width: 769px) {
+        .container {
+            margin-left: 100px;
+        }
+    }
+    
+    /* Share Popup Message */
+    .share-popup {
+        position: fixed;
+        bottom: 80px;
+        left: 80px;
+        background: #0D1117;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        z-index: 1001;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        white-space: nowrap;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    .share-popup.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    @media (max-width: 768px) {
+        .share-popup {
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+    }
+</style>
+
+<!-- Floating Social Share Buttons -->
+<div class="social-share-bar">
+    <a href="#" class="share-whatsapp" id="shareWhatsApp" title="Share on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#" class="share-twitter" id="shareTwitter" title="Share on Twitter/X">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="share-linkedin" id="shareLinkedIn" title="Share on LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" class="share-facebook" id="shareFacebook" title="Share on Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="share-email" id="shareEmail" title="Share via Email">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+
+<!-- Share Popup Message -->
+<div id="sharePopup" class="share-popup">
+    Thank you for sharing! 🙏
+</div>
+
+<script>
+    // Get current page URL and title
+    const currentUrl = encodeURIComponent(window.location.href);
+    const currentTitle = encodeURIComponent(document.title);
+    
+    // Share popup function
+    function showSharePopup() {
+        const popup = document.getElementById('sharePopup');
+        popup.classList.add('show');
+        setTimeout(() => {
+            popup.classList.remove('show');
+        }, 3000);
+    }
+    
+    // WhatsApp Share
+    document.getElementById('shareWhatsApp').addEventListener('click', function(e) {
+        e.preventDefault();
+        const text = encodeURIComponent(`Check out this SEO book: ${document.title} - ${window.location.href}`);
+        window.open(`https://wa.me/?text=${text}`, '_blank');
+        showSharePopup();
+    });
+    
+    // Twitter Share
+    document.getElementById('shareTwitter').addEventListener('click', function(e) {
+        e.preventDefault();
+        const text = encodeURIComponent(`Check out this SEO book: ${document.title}`);
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${currentUrl}`, '_blank');
+        showSharePopup();
+    });
+    
+    // LinkedIn Share
+    document.getElementById('shareLinkedIn').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${currentTitle}`, '_blank');
+        showSharePopup();
+    });
+    
+    // Facebook Share
+    document.getElementById('shareFacebook').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`, '_blank');
+        showSharePopup();
+    });
+    
+    // Email Share
+    document.getElementById('shareEmail').addEventListener('click', function(e) {
+        e.preventDefault();
+        const subject = encodeURIComponent(`Check out this SEO book: ${document.title}`);
+        const body = encodeURIComponent(`I found this SEO book helpful. Check it out: ${window.location.href}`);
+        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        showSharePopup();
+    });
+</script>
+
 </body>
 </html>
