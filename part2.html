@@ -27156,7 +27156,70 @@ Send this agenda 2 days before the call. Clients feel prepared and respected.</p
         section.insertAdjacentHTML('beforeend', navHtml);
     });
 })();
-</script>                                                                                     
+</script>      
+<!-- Soft Paywall: Shows a banner on returning visits (does not block Google) -->
+<script>
+(function() {
+    let visited = localStorage.getItem('seoBookVisited');
+    if (!visited) {
+        localStorage.setItem('seoBookVisited', 'true');
+    } else {
+        document.body.classList.add('returning-visitor');
+    }
+})();
+</script>
+
+<style>
+.returning-visitor .paywall-banner {
+    display: flex !important;
+}
+.paywall-banner {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0D1117;
+    border-left: 4px solid #C9973A;
+    padding: 16px 20px;
+    border-radius: 12px;
+    max-width: 300px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 10000;
+    align-items: center;
+    gap: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.paywall-banner p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: white;
+    flex: 1;
+}
+.paywall-banner a {
+    background: #C9973A;
+    color: #0D1117;
+    padding: 6px 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+@media (max-width: 600px) {
+    .paywall-banner {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+    }
+}
+</style>
+
+<div class="paywall-banner">
+    <p>📖 You've already read for free. Support the author — get the complete PDF.</p>
+    <a href="#buy">Buy KES 2,500 →</a>
+</div>
+
+                        
 </body>
 </html>
 
