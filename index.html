@@ -22951,6 +22951,47 @@ David Kiruo | SEO Mastery | +254 [phone] | david@seomastery.world
         showSharePopup();
     });
 </script>
+<script>
+(function() {
+    // Get all sections on the page that have an id starting with "s"
+    const sections = Array.from(document.querySelectorAll('section[id^="s"]'));
+    if (sections.length === 0) return;
+    
+    // For each section, create a navigation div and insert it
+    sections.forEach((section, index) => {
+        const prevSection = sections[index - 1];
+        const nextSection = sections[index + 1];
+        
+        // Skip if no prev and no next (single section)
+        if (!prevSection && !nextSection) return;
+        
+        // Build the navigation HTML
+        let navHtml = '<div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #E5E7EB;">';
+        
+        if (prevSection) {
+            // Extract title from the H2 inside the section
+            const prevTitle = prevSection.querySelector('h2')?.innerText || 'Previous';
+            navHtml += `<div><a href="#${prevSection.id}" style="color: #C9973A; text-decoration: none; font-size: 0.8rem;">← Previous: ${prevTitle}</a></div>`;
+        } else {
+            navHtml += '<div></div>';
+        }
+        
+        if (nextSection) {
+            const nextTitle = nextSection.querySelector('h2')?.innerText || 'Next';
+            navHtml += `<div><a href="#${nextSection.id}" style="color: #C9973A; text-decoration: none; font-size: 0.8rem;">Next: ${nextTitle} →</a></div>`;
+        } else {
+            navHtml += '<div></div>';
+        }
+        
+        navHtml += '</div>';
+        
+        // Insert the navigation div at the end of the section
+        section.insertAdjacentHTML('beforeend', navHtml);
+    });
+})();
+</script>
+
+    
     <!-- Continue to Part 2 -->
 <div style="text-align: center; margin: 60px 0 40px; padding: 30px; background: linear-gradient(135deg, #F4EFE4 0%, #E8E0D0 100%); border-radius: 20px;">
     <p style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">📖 Continue Your SEO Journey</p>
