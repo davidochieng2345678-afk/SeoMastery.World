@@ -3,20 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO Mastery: From Nairobi to the World | David Kiruo</title>
-    <meta name="description" content="The complete SEO mastery book by David Kiruo. Learn to rank on Google from Kenya to the world. 20 chapters of deep SEO knowledge.">
+    
+    <!-- TITLE WITH BRACKETS — Increased CTR -->
+    <title>SEO Mastery [The Complete 90-Day Roadmap] — Rank #1 on Google Without Paid Ads</title>
+    
+    <!-- META DESCRIPTION WITH EMOJIS — Stands out in search results -->
+    <meta name="description" content="🎯 Rank #1 on Google without paid ads. 📅 90-day action plan with real case studies (440% ROI). For business owners worldwide. From Nairobi to the world. 🌍">
+    
     <meta name="author" content="David Kiruo">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://seomastery.world/">
     
-    <meta property="og:title" content="SEO Mastery: From Nairobi to the World | David Kiruo">
-    <meta property="og:description" content="The SEO book written in Kenya for the world. 20 chapters, 300+ pages. Learn to dominate Google from anywhere.">
+    <!-- OPEN GRAPH (SOCIAL SHARING) — Enhanced with emojis -->
+    <meta property="og:title" content="SEO Mastery [The Complete 90-Day Roadmap] — Rank #1 on Google Without Paid Ads 🎯">
+    <meta property="og:description" content="📅 90-day action plan. 📊 Real case studies (440% ROI). 🌍 Strategies that work worldwide. No paid ads required. From Nairobi to the world.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SEO Mastery by David Kiruo">
+    <meta property="og:image" content="https://seomastery.world/images/seo-mastery-cover.jpg">
+    <meta property="og:url" content="https://seomastery.world/">
     
+    <!-- TWITTER CARD — Enhanced with emojis -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SEO Mastery: From Nairobi to the World">
-    <meta name="twitter:description" content="The SEO book written in Kenya for the world.">
+    <meta name="twitter:title" content="SEO Mastery [The Complete 90-Day Roadmap] — Rank #1 on Google 🎯">
+    <meta name="twitter:description" content="📅 90-day action plan. 📊 Real case studies. 🌍 Strategies that work worldwide. No paid ads required.">
+    <meta name="twitter:image" content="https://seomastery.world/images/seo-mastery-cover.jpg">
+    
+    <!-- SCHEMA MARKUP FOR ORGANIZATION (LOGO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SEO Mastery by David Kiruo",
+      "url": "https://seomastery.world",
+      "logo": "https://seomastery.world/images/logo.svg",
+      "sameAs": [
+        "https://twitter.com/seomastery",
+        "https://linkedin.com/in/davidkiruo"
+      ]
+    }
+    </script>
+    
+    <!-- SCHEMA MARKUP FOR BOOK (PRODUCT) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "SEO Mastery: The Complete 90-Day Roadmap",
+      "image": "https://seomastery.world/images/seo-mastery-cover.jpg",
+      "description": "The complete 90-day SEO roadmap with real case studies, actionable strategies, and proven frameworks. Rank #1 on Google without paid ads.",
+      "brand": {
+        "@type": "Brand",
+        "name": "SEO Mastery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "12.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47"
+      }
+    }
+    </script>
     
     <style>
         * {
@@ -33,6 +84,52 @@
             scroll-behavior: smooth;
         }
         
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Offset for sticky nav — prevents section title from hiding behind nav */
+        section, [id] {
+            scroll-margin-top: 80px;
+        }
+        
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            background: #C9973A;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #0D1117;
+        }
+        
+        .logo-text {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #FAFAF8;
+        }
+        
+        .logo-text small {
+            font-size: 0.7rem;
+            color: #C9973A;
+            font-weight: normal;
+        }
+        
+        /* Navigation */
         .nav {
             background: #0D1117;
             padding: 16px 24px;
@@ -51,16 +148,6 @@
             flex-wrap: wrap;
             gap: 16px;
         }
-        
-        .nav-logo {
-            font-family: Georgia, serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #FAFAF8;
-            text-decoration: none;
-        }
-        
-        .nav-logo span { color: #C9973A; }
         
         .nav-links {
             display: flex;
@@ -89,20 +176,40 @@
             padding: 8px 20px;
         }
         
+        .nav-links a:last-child:hover {
+            background: #b07e2a;
+            transform: translateY(-2px);
+        }
+        
         @media (max-width: 768px) {
             .nav-container { flex-direction: column; }
             .nav-links { justify-content: center; }
         }
         
+        /* Hero Section */
         .hero {
-            background: #0D1117;
+            background: linear-gradient(135deg, #0D1117 0%, #1A1A1A 100%);
             padding: 100px 24px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "🔑";
+            position: absolute;
+            font-size: 300px;
+            opacity: 0.03;
+            bottom: -50px;
+            right: -50px;
+            pointer-events: none;
         }
         
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         
         .badge {
@@ -154,10 +261,15 @@
             font-weight: 700;
             display: inline-block;
             margin: 0 8px 16px;
-            transition: transform 0.2s;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(201,151,58,0.3);
         }
         
-        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-primary:hover { 
+            transform: translateY(-2px); 
+            background: #b07e2a;
+            box-shadow: 0 6px 16px rgba(201,151,58,0.4);
+        }
         
         .btn-secondary {
             border: 1.5px solid rgba(255,255,255,0.3);
@@ -181,7 +293,7 @@
             justify-content: center;
             gap: 48px;
             flex-wrap: wrap;
-            margin-top: 32px;
+            margin-top: 48px;
         }
         
         .stat-number {
@@ -197,12 +309,33 @@
             color: rgba(255,255,255,0.5);
         }
         
+        /* Container */
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 60px 24px;
         }
         
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .section-header h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0D1117;
+            margin-bottom: 12px;
+        }
+        
+        .section-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        /* TOC Section */
         .toc-section {
             background: #F4EFE4;
             border-radius: 24px;
@@ -216,6 +349,12 @@
             border-radius: 12px;
             margin-bottom: 12px;
             overflow: hidden;
+            transition: all 0.2s;
+        }
+        
+        .toc-chapter:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         
         .toc-chapter-header {
@@ -255,15 +394,6 @@
             font-size: 0.8rem;
         }
         
-        footer {
-            background: #0D1117;
-            color: rgba(255,255,255,0.5);
-            text-align: center;
-            padding: 32px 24px;
-        }
-        
-        footer a { color: #C9973A; text-decoration: none; }
-        
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .hero { padding: 60px 20px; }
@@ -271,46 +401,55 @@
             .stats { gap: 24px; }
             .toc-section { padding: 24px; }
         }
-
-        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<nav class="nav">
+<!-- ============================================ -->
+<!-- PART 1: NAVIGATION + HERO + STATS -->
+<!-- ============================================ -->
 
+<nav class="nav">
     <div class="nav-container">
-        <a href="#" class="nav-logo">David <span>Kiruo</span></a>
+        <a href="#" class="logo">
+            <div class="logo-icon">SM</div>
+            <div class="logo-text">SEO Mastery<br><small>by David Kiruo</small></div>
+        </a>
         <div class="nav-links">
-            <a href="#chapters">Chapters</a>
-            <a href="#about">About</a>
-            <a href="#buy">Buy Book</a>
+            <a href="#chapters">📚 Chapters</a>
+            <a href="#about">👤 About</a>
+            <a href="#buy">📖 Buy Book</a>
         </div>
     </div>
 </nav>
 
 <section class="hero">
     <div class="hero-content">
-        <div class="badge">📖 The SEO Book the World Has Been Waiting For</div>
+        <div class="badge">🏆 THE SEO BOOK THE WORLD HAS BEEN WAITING FOR</div>
         <h1>SEO <span class="h1-accent">Mastery</span><br>From Nairobi to the World</h1>
         <p class="tagline">"Written in Kenya. Read Around the Globe."</p>
-        <p class="hero-desc">I spent years figuring out what actually works. This book is everything I know — 20 chapters, 300+ pages, zero fluff. Written for the world, from my home in Nairobi.</p>
+        <p class="hero-desc">I spent years figuring out what actually works. This book is everything I know — 20 chapters, 300+ pages, zero fluff. Written for the world, from my home in Nairobi. <strong>No paid ads required.</strong></p>
         <div>
-            <a href="#buy" class="btn-primary">📖 Buy the Book — KES 1,500 / $12 USD</a>
-            <a href="#chapters" class="btn-secondary">Read Free Chapters ↓</a>
+            <a href="#buy" class="btn-primary">📖 Buy the Book — $12 USD / KES 1,500</a>
+            <a href="#chapters" class="btn-secondary">📋 Read Free Chapters ↓</a>
         </div>
         <div class="stats">
             <div><div class="stat-number">20</div><div class="stat-label">Chapters</div></div>
             <div><div class="stat-number">300+</div><div class="stat-label">Pages</div></div>
             <div><div class="stat-number">100%</div><div class="stat-label">Global Focus</div></div>
-            <div><div class="stat-number">🇰🇪</div><div class="stat-label">From Nairobi</div></div>
+            <div><div class="stat-number">440%</div><div class="stat-label">Avg. Client ROI</div></div>
         </div>
     </div>
 </section>
 
-<main class="container">
-    
+<main class="container" id="chapters">
+
+    <!-- Section Header -->
+    <div class="section-header">
+        <h2>📑 What You'll Learn</h2>
+        <p>20 chapters of actionable SEO knowledge — from beginner to advanced</p>
+    </div>
     <!-- ============================================ -->
     <!-- TABLE OF CONTENTS SECTION                     -->
     <!-- ============================================ -->
