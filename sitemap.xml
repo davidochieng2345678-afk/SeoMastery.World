@@ -1,58 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    
-    <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Page 1: Homepage / Table of Contents -->
     <url>
-        <loc>https://seomastery.world/</loc>
-        <lastmod>2025-05-25</lastmod>
+        <loc>https://dkworldkenya.online/</loc>
+        <lastmod>2025-06-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- Main pages -->
+
+    <!-- Page 2: Full Book Content (All 20 Chapters) -->
     <url>
-        <loc>https://seomastery.world/about.html</loc>
-        <lastmod>2025-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://seomastery.world/buy.html</loc>
-        <lastmod>2025-05-25</lastmod>
+        <loc>https://dkworldkenya.online/part2.html</loc>
+        <lastmod>2025-06-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
-    <url>
-        <loc>https://seomastery.world/contact.html</loc>
-        <lastmod>2025-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Chapters directory -->
-    <url>
-        <loc>https://seomastery.world/chapters/</loc>
-        <lastmod>2025-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Section 1.1 -->
-    <url>
-        <loc>https://seomastery.world/chapters/chapter-1/section-1.1/</loc>
-        <lastmod>2025-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Section 1.2 -->
-    <url>
-        <loc>https://seomastery.world/chapters/chapter-1/section-1.2/</loc>
-        <lastmod>2025-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
+
 </urlset>
