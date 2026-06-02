@@ -23332,6 +23332,71 @@ David Kiruo | SEO Mastery | +254 [phone] | david@seomastery.world
     <p style="margin-bottom: 20px;">You have completed Chapters 1 through 13.1. Continue reading Chapters 13.2 through 20.</p>
     <a href="part2.html#s13.2" style="background: #C9973A; color: #0D1117; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block;">Continue to Part 2 →</a>
 </div>
+<script>
+// List of purchase notifications from 15 different countries
+const purchases = [
+    { flag: "🇿🇦", name: "Jane", location: "Johannesburg, South Africa" },
+    { flag: "🇰🇪", name: "James", location: "Nairobi, Kenya" },
+    { flag: "🇳🇬", name: "Michael", location: "Lagos, Nigeria" },
+    { flag: "🇺🇸", name: "Sarah", location: "New York, USA" },
+    { flag: "🇬🇧", name: "David", location: "London, United Kingdom" },
+    { flag: "🇮🇳", name: "Priya", location: "Mumbai, India" },
+    { flag: "🇦🇪", name: "Ahmed", location: "Dubai, UAE" },
+    { flag: "🇨🇦", name: "Lisa", location: "Toronto, Canada" },
+    { flag: "🇦🇺", name: "Tom", location: "Sydney, Australia" },
+    { flag: "🇩🇪", name: "Felix", location: "Berlin, Germany" },
+    { flag: "🇫🇷", name: "Sophie", location: "Paris, France" },
+    { flag: "🇧🇷", name: "Carlos", location: "São Paulo, Brazil" },
+    { flag: "🇯🇵", name: "Yuki", location: "Tokyo, Japan" },
+    { flag: "🇲🇽", name: "Elena", location: "Mexico City, Mexico" },
+    { flag: "🇪🇸", name: "Miguel", location: "Madrid, Spain" }
+];
 
+let popupInterval;
+let popupTimeout;
+
+function showRandomPurchase() {
+    const randomIndex = Math.floor(Math.random() * purchases.length);
+    const purchase = purchases[randomIndex];
+    const message = `${purchase.name} from ${purchase.location} just bought SEO Mastery`;
+    
+    const popup = document.getElementById('purchasePopup');
+    const flagSpan = popup.querySelector('.flag');
+    const messageSpan = document.getElementById('popupMessage');
+    
+    flagSpan.textContent = purchase.flag;
+    messageSpan.textContent = message;
+    
+    popup.classList.add('show');
+    
+    if (popupTimeout) clearTimeout(popupTimeout);
+    
+    popupTimeout = setTimeout(() => {
+        popup.classList.remove('show');
+    }, 5000);
+}
+
+function closePopup() {
+    const popup = document.getElementById('purchasePopup');
+    popup.classList.remove('show');
+    if (popupTimeout) clearTimeout(popupTimeout);
+}
+
+function startPurchaseNotifications() {
+    setTimeout(() => {
+        showRandomPurchase();
+        popupInterval = setInterval(showRandomPurchase, Math.random() * (90000 - 45000) + 45000);
+    }, 90000);
+}
+
+function stopPurchaseNotifications() {
+    if (popupInterval) clearInterval(popupInterval);
+    if (popupTimeout) clearTimeout(popupTimeout);
+}
+
+window.addEventListener('load', startPurchaseNotifications);
+window.addEventListener('beforeunload', stopPurchaseNotifications);
+</script>
+    
 </body>
 </html>
