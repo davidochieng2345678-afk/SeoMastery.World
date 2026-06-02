@@ -401,6 +401,42 @@
             .stats { gap: 24px; }
             .toc-section { padding: 24px; }
         }
+
+
+        /* Purchase Popup Notification */
+.purchase-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #0D1117;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #C9973A;
+}
+.purchase-popup.show {
+    transform: translateX(0);
+}
+.purchase-popup .flag {
+    font-size: 1.2rem;
+}
+.purchase-popup .close {
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    font-size: 1rem;
+}
+.purchase-popup .close:hover {
+    opacity: 1;
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
