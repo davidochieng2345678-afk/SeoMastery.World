@@ -1,4 +1,295 @@
-  <h3 itemprop="name">21.1 What Is GEO? Why SEO Is No Longer Enough</h3>
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Mastery — Part 3: Advanced & Future SEO | David Kiruo</title>
+    <meta name="description" content="Advanced SEO topics for the AI era: Generative Engine Optimization (GEO), Digital PR, Technical SEO Debt, Sustainable SEO, International SEO, and the future of search (2030).">
+    <meta name="author" content="David Kiruo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://voltplughub.shop/part3.html">
+    
+    <meta property="og:title" content="SEO Mastery — Part 3: Advanced & Future SEO">
+    <meta property="og:description" content="Generative Engine Optimization, Digital PR, Technical SEO Debt, Sustainable SEO, International SEO, and the future of search (2030).">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SEO Mastery by David Kiruo">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FAFAF8;
+            color: #1A1A1A;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+        
+        html {
+            scroll-padding-top: 80px;
+        }
+        
+        .nav {
+            background: #0D1117;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            background: #C9973A;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #0D1117;
+        }
+        
+        .logo-text {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #FAFAF8;
+        }
+        
+        .logo-text small {
+            font-size: 0.7rem;
+            color: #C9973A;
+            font-weight: normal;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: #FAFAF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(201,151,58,0.15);
+            color: #C9973A;
+        }
+        
+        .nav-links a:last-child {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 8px 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; }
+            .nav-links { justify-content: center; }
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #0D1117 0%, #1A1A1A 100%);
+            padding: 80px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "🚀";
+            position: absolute;
+            font-size: 300px;
+            opacity: 0.03;
+            bottom: -50px;
+            right: -50px;
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(201,151,58,0.15);
+            color: #C9973A;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+        }
+        
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #FAFAF8;
+            margin-bottom: 16px;
+        }
+        
+        .h1-accent { color: #C9973A; }
+        
+        .tagline {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.6);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .hero-desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-primary {
+            background: #C9973A;
+            color: #0D1117;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin: 0 8px 16px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(201,151,58,0.3);
+        }
+        
+        .btn-primary:hover { 
+            transform: translateY(-2px); 
+            background: #b07e2a;
+            box-shadow: 0 6px 16px rgba(201,151,58,0.4);
+        }
+        
+        .btn-secondary {
+            border: 1.5px solid rgba(255,255,255,0.3);
+            color: #FAFAF8;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0 8px 16px;
+            transition: all 0.2s;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #C9973A;
+            color: #C9973A;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-top: 48px;
+        }
+        
+        .stat-number {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #C9973A;
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .hero { padding: 60px 20px; }
+            .stats { gap: 24px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-container">
+        <a href="/" class="logo">
+            <div class="logo-icon">SM</div>
+            <div class="logo-text">SEO Mastery<br><small>by David Kiruo</small></div>
+        </a>
+        <div class="nav-links">
+            <a href="/">📚 Book</a>
+            <a href="/insights.html">📝 Insights</a>
+            <a href="/part2.html">📖 Part 2</a>
+            <a href="/part3.html">🚀 Part 3</a>
+            <a href="#get-pdf">💰 Get PDF</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="/images/book-cover-placeholder.svg" alt="SEO Mastery Book Cover" style="max-width: 200px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        </div>
+        <div class="badge">🚀 ADVANCED & FUTURE SEO</div>
+        <h1>SEO <span class="h1-accent">Mastery</span><br>Part 3: Advanced & Future SEO</h1>
+        <p class="tagline">"Generative Engine Optimization • Digital PR • Technical Debt • International SEO • Search 2030"</p>
+        <p class="hero-desc">This is the final part of the trilogy. Learn how to dominate AI answer engines, earn media at scale, fix technical debt sustainably, expand globally, and prepare for the future of search.</p>
+        <div>
+            <a href="#get-pdf" class="btn-primary">📥 Get PDF + Bonuses — $12</a>
+            <a href="#ch21" class="btn-secondary">📖 Read Part 3 Free ↓</a>
+        </div>
+        <div class="stats">
+            <div><div class="stat-number">5</div><div class="stat-label">Chapters</div></div>
+            <div><div class="stat-number">25</div><div class="stat-label">Sections</div></div>
+            <div><div class="stat-number">100+</div><div class="stat-label">Pages</div></div>
+            <div><div class="stat-number">2030</div><div class="stat-label">Future‑Ready</div></div>
+        </div>
+    </div>
+</section>
+
+
+<h3 itemprop="name">21.1 What Is GEO? Why SEO Is No Longer Enough</h3>
     
     <p><strong>The search paradigm has shifted – permanently.</strong> For nearly two decades, SEO professionals optimised for a single outcome: ranking in the ten blue links. You wrote content, earned backlinks, improved Core Web Vitals, and prayed for a page one position. Then the user clicked, and you got a visitor. That linear model is now obsolete.</p>
     
