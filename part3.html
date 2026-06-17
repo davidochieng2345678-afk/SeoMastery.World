@@ -8348,5 +8348,69 @@ h1 {
     </div>
 </footer>
 
+
+<!-- ============================================================ -->
+<!-- 🔥 FLOATING NOTIFICATION BAR – Sticky Bottom                  -->
+<!-- ============================================================ -->
+<div style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0D1117;
+    border-top: 3px solid #C9973A;
+    padding: 12px 20px;
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px 24px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+">
+
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="background: #FF4444; color: #FFFFFF; padding: 2px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 700;">⚠️ N/B</span>
+        <span style="color: #FAFAF8; font-size: 0.85rem;">
+            <strong style="color: #C997A3;">21-Day RAK</strong> — <strong style="color: #FF4444;">NOT</strong> available online
+        </span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="color: rgba(255,255,255,0.4); font-size: 0.75rem; text-decoration: line-through;">$29.99</span>
+        <span style="color: #C9973A; font-size: 1.2rem; font-weight: 900;">$12.99</span>
+    </div>
+
+    <!-- PayPal Button Here -->
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="display: inline-block;">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="your-email@example.com">
+        <input type="hidden" name="item_name" value="SEO Mastery — Complete Book PDF">
+        <input type="hidden" name="amount" value="12.99">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="no_note" value="1">
+        <input type="hidden" name="shipping" value="0.00">
+        <input type="hidden" name="rm" value="1">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal" style="height: 32px;">
+    </form>
+
+    <button onclick="this.parentElement.style.display='none'" style="
+        background: transparent;
+        border: none;
+        color: rgba(255,255,255,0.3);
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0 4px;
+    ">✕</button>
+</div>
+
+<!-- Close button functionality -->
+<script>
+function closeFloatingBar() {
+    document.getElementById('floatingBar').style.display = 'none';
+}
+</script>
+    
 </body>
 </html>
