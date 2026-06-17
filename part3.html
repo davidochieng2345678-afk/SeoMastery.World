@@ -319,6 +319,163 @@ h1 {
     .hero { padding: 60px 20px; }
     .stats { gap: 24px; }
 }
+
+
+/* ============================================================ */
+/* COMPLETE CSS FOR ALL BANNERS                                  */
+/* ============================================================ */
+
+/* Full-Width Banner */
+.banner-rak {
+    background: linear-gradient(135deg, #0D1117 0%, #1A1A1A 50%, #0D1117 100%);
+    border-top: 4px solid #C9973A;
+    border-bottom: 4px solid #C9973A;
+    padding: 24px 20px;
+    margin: 20px 0 30px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.banner-rak .glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(201,151,58,0.05) 0%, transparent 60%);
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.banner-rak .badge {
+    display: inline-block;
+    background: #FF4444;
+    color: #FFFFFF;
+    padding: 4px 16px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    animation: blinkWarning 1.5s infinite;
+}
+
+.banner-rak .title {
+    color: #FAFAF8;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    margin: 8px 0 4px 0;
+    font-weight: 700;
+}
+
+.banner-rak .title .highlight {
+    color: #C9973A;
+}
+
+.banner-rak .note {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05rem;
+    margin: 4px 0 12px 0;
+    font-weight: 500;
+}
+
+.banner-rak .note .n-b {
+    background: #FF4444;
+    color: #FFFFFF;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.banner-rak .note .not {
+    color: #FF4444;
+}
+
+.banner-rak .note .only {
+    color: #C9973A;
+}
+
+.banner-rak .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 24px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    border: 1px solid rgba(201,151,58,0.2);
+}
+
+.banner-rak .features .item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+.banner-rak .cta {
+    margin: 16px 0 4px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.banner-rak .cta .price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.banner-rak .cta .old {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8rem;
+    text-decoration: line-through;
+}
+
+.banner-rak .cta .new {
+    color: #C9973A;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.banner-rak .footer {
+    color: rgba(255,255,255,0.35);
+    font-size: 0.7rem;
+    margin: 8px 0 0 0;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes blinkWarning {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-rak .title {
+        font-size: 1.1rem;
+    }
+    .banner-rak .note {
+        font-size: 0.9rem;
+    }
+    .banner-rak .features .item {
+        font-size: 0.8rem;
+    }
+    .banner-rak .cta .new {
+        font-size: 1.5rem;
+    }
+}            
     </style>
 </head>
 <body>
