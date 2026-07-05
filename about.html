@@ -1,0 +1,297 @@
+<!-- ============================================ -->
+<!-- COMPLETE AUTHOR BIO + BOOK COVERS SECTION    -->
+<!-- Copy and paste this entire block into your   -->
+<!-- HTML page. No editing required – images are  -->
+<!-- already linked and working.                  -->
+<!-- ============================================ -->
+
+<section class="author-bio-section">
+    <div class="author-bio-container">
+
+        <!-- ===== BOOK COVER GALLERY (Left side) ===== -->
+        <div class="book-cover-wrapper">
+            <!-- Cover Image 1 (Main) -->
+            <div class="book-cover-main">
+                <img src="https://i.ibb.co/WvDZk8yn/file-00000000ab3871f4a2cf9c802ff0a18c.png" 
+                     alt="SEO Mastery Book Cover - David Kiruo" 
+                     class="book-cover-img">
+            </div>
+            <!-- Cover Image 2 (Secondary / Thumbnail) -->
+            <div class="book-cover-secondary">
+                <img src="https://i.ibb.co/Sws3nk1z/file-00000000453c71f4a19e60675a227a5a.png" 
+                     alt="SEO Mastery Book Cover Alternate - David Kiruo" 
+                     class="book-cover-img-small">
+            </div>
+        </div>
+
+        <!-- ===== AUTHOR BIO CONTENT (Right side) ===== -->
+        <div class="author-bio-content">
+
+            <h2 class="author-name">David Ochieng Kiruo</h2>
+            <p class="author-title">SEO Expert &amp; Founder of DK Digital</p>
+
+            <!-- SHORT BIO -->
+            <p class="author-bio-short">
+                David Kiruo is a Nairobi-based SEO expert, digital strategist, and founder of DK Digital. 
+                Born on February 11, 1988, he developed the proprietary <strong>21-Day RAK System</strong> 
+                (Crawl Storm, Rapid Indexing, Authority Boost) after a decade of hands-on experience. 
+                He is the author of <em>SEO Mastery: The Complete 90-Day Roadmap</em>, a 300+ page digital 
+                guide designed to help entrepreneurs rank websites quickly and sustainably.
+            </p>
+
+            <!-- LONG BIO -->
+            <div class="author-bio-long">
+                <p>
+                    David Ochieng Kiruo is a Kenyan-born SEO specialist and the driving force behind DK Digital, 
+                    a premier SEO agency headquartered in Nairobi. Born on February 11, 1988, David has spent 
+                    over ten years decoding search engine algorithms, helping businesses—from local startups to 
+                    international brands—achieve top Google rankings.
+                </p>
+                <p>
+                    Frustrated by complex, theoretical SEO guides that failed to deliver practical results, 
+                    David synthesized his real-world experience into a powerful, results-driven framework: 
+                    the <strong>21-Day RAK System</strong>. This unique methodology, which combines Crawl Storm, 
+                    Rapid Indexing, and Authority Boost, is the backbone of his debut book, 
+                    <em>SEO Mastery: The Complete 90-Day Roadmap</em>.
+                </p>
+                <p>
+                    Published digitally via <a href="https://dkworldkenya.online/" target="_blank">dkworldkenya.online</a>, 
+                    the book offers a no-fluff, step-by-step blueprint for turning any website into a 
+                    traffic-generating machine. With a mission to bring Kenyan expertise to the global digital 
+                    stage, David continues to consult, write, and speak on SEO strategy while running his 
+                    agency at <a href="https://dkdigitalseo.online/" target="_blank">dkdigitalseo.online</a>.
+                </p>
+            </div>
+
+            <!-- BUTTONS / LINKS -->
+            <div class="author-links">
+                <a href="https://dkworldkenya.online/" target="_blank" class="btn btn-primary">📖 Buy the Book</a>
+                <a href="https://dkdigitalseo.online/" target="_blank" class="btn btn-secondary">🌐 Visit My Agency</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- STYLES (Static CSS – include once)           -->
+<!-- ============================================ -->
+
+<style>
+    /* ----- Reset / Base ----- */
+    .author-bio-section {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f8f9fa;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .author-bio-container {
+        max-width: 1100px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+        padding: 40px 35px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+        align-items: flex-start;
+        border: 1px solid #e9ecef;
+    }
+
+    /* ----- Book Cover Gallery (Left) ----- */
+    .book-cover-wrapper {
+        flex: 0 0 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+    }
+
+    .book-cover-main {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        transition: transform 0.25s ease;
+        border: 2px solid #f1f3f5;
+    }
+
+    .book-cover-main:hover {
+        transform: scale(1.02);
+    }
+
+    .book-cover-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .book-cover-secondary {
+        width: 80%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        border: 2px solid #f1f3f5;
+        transition: transform 0.25s ease;
+    }
+
+    .book-cover-secondary:hover {
+        transform: scale(1.03);
+    }
+
+    .book-cover-img-small {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* ----- Author Bio Content (Right) ----- */
+    .author-bio-content {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .author-name {
+        font-size: 30px;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 0 0 4px 0;
+        letter-spacing: -0.5px;
+    }
+
+    .author-title {
+        font-size: 17px;
+        color: #1a73e8;
+        font-weight: 500;
+        margin: 0 0 16px 0;
+        letter-spacing: 0.2px;
+    }
+
+    .author-bio-short {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #2d3436;
+        margin: 0 0 18px 0;
+        padding-bottom: 18px;
+        border-bottom: 2px solid #f1f3f5;
+    }
+
+    .author-bio-short strong {
+        color: #1a73e8;
+    }
+
+    .author-bio-long p {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #2d3436;
+        margin: 0 0 12px 0;
+    }
+
+    .author-bio-long a {
+        color: #1a73e8;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .author-bio-long a:hover {
+        text-decoration: underline;
+    }
+
+    /* ----- Buttons ----- */
+    .author-links {
+        margin-top: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 11px 28px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none !important;
+        transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background: #1a73e8;
+        color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+    }
+
+    .btn-primary:hover {
+        background: #1557b0;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(26, 115, 232, 0.35);
+        text-decoration: none !important;
+        color: #ffffff !important;
+    }
+
+    .btn-secondary {
+        background: #f1f3f5;
+        color: #1a1a2e !important;
+        border: 1px solid #dde1e5;
+    }
+
+    .btn-secondary:hover {
+        background: #e9ecef;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        text-decoration: none !important;
+        color: #1a1a2e !important;
+    }
+
+    /* ----- Responsive (Mobile) ----- */
+    @media (max-width: 768px) {
+        .author-bio-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .book-cover-wrapper {
+            flex: 0 0 auto;
+            width: 220px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .book-cover-main {
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .book-cover-secondary {
+            width: 60%;
+            max-width: 160px;
+        }
+
+        .author-name {
+            font-size: 26px;
+        }
+
+        .author-links {
+            justify-content: center;
+        }
+
+        .author-bio-short {
+            text-align: left;
+        }
+
+        .author-bio-long p {
+            text-align: left;
+        }
+    }
+</style>
