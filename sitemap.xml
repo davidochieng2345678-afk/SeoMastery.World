@@ -32,5 +32,12 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-
+<!-- Part 4: AI & GEO – The Future of Search -->
+<url>
+    <loc>https://dkworldkenya.online/part4.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+        
 </urlset>
